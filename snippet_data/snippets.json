@@ -63,14 +63,38 @@
           "example": "capitalize('fooBar'); // 'FooBar'\ncapitalize('fooBar', lowerRest: true); // 'Foobar'"
         },
         "tags": [
-          "utility",
-          "intermediate"
+          "string",
+          "beginner"
         ]
       },
       "meta": {
         "hash": "f82ab66357c89f0892f0339fa5a3b47ab2569a96a9717a0914e6072b9cb2a2c9",
         "firstSeen": "1579632223",
-        "lastUpdated": "1579632223",
+        "lastUpdated": "1579632349",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "decapitalize",
+      "title": "decapitalize",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "decapitalize.md",
+        "text": "Decapitalizes the first letter of a string.\n\nUse `String.toLowerCase()` to decapitalize first letter and `String.toUpperCase()` to convert the rest of the string to uppercase, if necessary.\nOmit the optional parameter, `upperRest`, to keep the rest of the string intact, or set it to `true` to convert to uppercase.\n\n\nconst capitalize = ([first, ...res\n\n",
+        "codeBlocks": {
+          "code": "String capitalize(String str, {bool upperRest = false}) {\n  return str[0].toUpperCase() +\n      (upperRest ? str.substring(1).toLowerCase() : str.substring(1));\n}",
+          "example": "capitalize('FooBar'); // 'fooBar'\ncapitalize('FooBar', upperRest: true); // 'fOOBAR'"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "b992eeded58638cda05541970bbe4f4b28c9a4a5a2f5c995294cdaaa518ea50f",
+        "firstSeen": "1579632349",
+        "lastUpdated": "1579632349",
         "updateCount": 2,
         "authorCount": 2
       }
