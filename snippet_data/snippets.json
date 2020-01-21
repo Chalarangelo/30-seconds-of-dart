@@ -105,9 +105,9 @@
       "type": "snippet",
       "attributes": {
         "fileName": "max.md",
-        "text": "Returns the maximum value in a list of numbers.\n\nUse `iterable.reduce()` in combination with `math.max()` to find the maximum value.\n\n",
+        "text": "Returns the maximum value in a list of numbers.\n\nUse `iterable.reduce()` in combination with `max()` to find the maximum value.\n\n",
         "codeBlocks": {
-          "code": "import 'dart:math' as math;\n\nnum max(List<num> nums){\n  return nums.reduce(math.max);\n}",
+          "code": "import 'dart:math';\n\nnum max(List<num> nums){\n  return nums.reduce(max);\n}",
           "example": "max([4, 6, 1, 2, 5]); // 6"
         },
         "tags": [
@@ -117,10 +117,10 @@
         ]
       },
       "meta": {
-        "hash": "93179c9e5958873e2bfb10f25039e637c59377a37c1f0cdf835589f5f5a65258",
+        "hash": "aaccab0c111410652b5ff069e17263dc4ed12695afb3385a2ce4f76f50c182d8",
         "firstSeen": "1579626973",
-        "lastUpdated": "1579626973",
-        "updateCount": 2,
+        "lastUpdated": "1579630133",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -130,9 +130,9 @@
       "type": "snippet",
       "attributes": {
         "fileName": "maxBy.md",
-        "text": "Returns the maximum value of a list, after mapping each element to a number using the provided function.\n\nUse `iterable.map()` to map each element to the numeric value returned by `fn`, `math.max()` to find the maximum value.\n\n",
+        "text": "Returns the maximum value of a list, after mapping each element to a number using the provided function.\n\nUse `iterable.map()` to map each element to the numeric value returned by `fn`, `max()` to find the maximum value.\n\n",
         "codeBlocks": {
-          "code": "import 'dart:math' as math;\n\nnum maxBy<T>(List<T> lst, num Function(T) fn) {\n  return lst.map(fn).reduce(math.max);\n}",
+          "code": "import 'dart:math';\n\nnum maxBy<T>(List<T> lst, num Function(T) fn) {\n  return lst.map(fn).reduce(math.max);\n}",
           "example": "maxBy([ {'n': 4}, {'n': 2}, {'n': 8}, {'n': 6} ], (o) => o['n']); // 8"
         },
         "tags": [
@@ -143,10 +143,10 @@
         ]
       },
       "meta": {
-        "hash": "6d33edbb4c822bf35271ea4b605dca75c76b9f688428159275ce5796b3926879",
+        "hash": "67487fd1d1c669a4609658fb0b79463f6202c4bdaed116246f90c6733a83a69e",
         "firstSeen": "1579628185",
-        "lastUpdated": "1579628185",
-        "updateCount": 2,
+        "lastUpdated": "1579630133",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -156,9 +156,9 @@
       "type": "snippet",
       "attributes": {
         "fileName": "min.md",
-        "text": "Returns the minimum value in a list of numbers.\n\nUse `iterable.reduce()` in combination with `math.min()` to find the minimum value.\n\n",
+        "text": "Returns the minimum value in a list of numbers.\n\nUse `iterable.reduce()` in combination with `min()` to find the minimum value.\n\n",
         "codeBlocks": {
-          "code": "import 'dart:math' as math;\n\nnum min(List<num> nums){\n  return nums.reduce(math.min);\n}",
+          "code": "import 'dart:math';\n\nnum min(List<num> nums){\n  return nums.reduce(math.min);\n}",
           "example": "min([4, 6, 1, 2, 5]); // 1"
         },
         "tags": [
@@ -168,10 +168,10 @@
         ]
       },
       "meta": {
-        "hash": "cc987dbd0de7626643ca3ba60321d896ae8e2234dfea53b654a3219bb5321a89",
+        "hash": "a8d90c3c0061219ffe42a41f36d1a05b5aaf80cc27c20080732774bc88d22733",
         "firstSeen": "1579626973",
-        "lastUpdated": "1579626973",
-        "updateCount": 2,
+        "lastUpdated": "1579630133",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -181,9 +181,9 @@
       "type": "snippet",
       "attributes": {
         "fileName": "minBy.md",
-        "text": "Returns the minimum value of a list, after mapping each element to a number using the provided function.\n\nUse `iterable.map()` to map each element to the numeric value returned by `fn`, `math.min()` to find the minimum value.\n\n",
+        "text": "Returns the minimum value of a list, after mapping each element to a number using the provided function.\n\nUse `iterable.map()` to map each element to the numeric value returned by `fn`, `min()` to find the minimum value.\n\n",
         "codeBlocks": {
-          "code": "import 'dart:math' as math;\n\nnum minBy<T>(List<T> lst, num Function(T) fn) {\n  return lst.map(fn).reduce(math.min);\n}",
+          "code": "import 'dart:math';\n\nnum minBy<T>(List<T> lst, num Function(T) fn) {\n  return lst.map(fn).reduce(math.min);\n}",
           "example": "minBy([ {'n': 4}, {'n': 2}, {'n': 8}, {'n': 6} ], (o) => o['n']); // 8"
         },
         "tags": [
@@ -194,10 +194,10 @@
         ]
       },
       "meta": {
-        "hash": "0a738fbe4e38e6c564acc5fe292c0b0291080989197c533ab6a63e08b9a66b82",
+        "hash": "a4ca334714e310032c713857838da738470736ec365c3eccdf54400fdfea42f8",
         "firstSeen": "1579628185",
-        "lastUpdated": "1579628185",
-        "updateCount": 2,
+        "lastUpdated": "1579630133",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
