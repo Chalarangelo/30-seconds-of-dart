@@ -5,7 +5,7 @@ tags: math,list,function,intermediate
 
 Returns the maximum value of a list, after mapping each element to a number using the provided function.
 
-Use `iterable.map()` to map each element to the numeric value returned by `fn`, `max()` to find the maximum value.
+Use `Iterable.map()` to map each element to the numeric value returned by `fn`, `max()` to find the maximum value.
 
 ```dart
 import 'dart:math';

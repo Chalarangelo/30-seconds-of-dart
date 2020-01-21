@@ -5,7 +5,7 @@ tags: math,list,beginner
 
 Returns the minimum value in a list of numbers.
 
-Use `iterable.reduce()` in combination with `min()` to find the minimum value.
+Use `Iterable.reduce()` in combination with `min()` to find the minimum value.
 
 ```dart
 import 'dart:math';

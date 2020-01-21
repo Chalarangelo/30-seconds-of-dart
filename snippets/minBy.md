@@ -5,7 +5,7 @@ tags: math,list,function,intermediate
 
 Returns the minimum value of a list, after mapping each element to a number using the provided function.
 
-Use `iterable.map()` to map each element to the numeric value returned by `fn`, `min()` to find the minimum value.
+Use `Iterable.map()` to map each element to the numeric value returned by `fn`, `min()` to find the minimum value.
 
 ```dart
 import 'dart:math';
