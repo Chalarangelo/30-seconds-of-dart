@@ -202,6 +202,58 @@
       }
     },
     {
+      "id": "randomDoubleInRange",
+      "title": "randomDoubleInRange",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "randomDoubleInRange.md",
+        "text": "Returns a random double in the specified range.\n\nUse `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range.\nOmit the optional parameter, `min`, to use a default minimu value of `0.0`.\nOmit the optional parameter, `max`, to use a default maximum value of `1.0`.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math';\n\ndouble randomDoubleInRange({double min = 0.0, double max = 1.0}) {\n  return new Random().nextDouble() * (max - min + 1) + min;\n}",
+          "example": "randomDoubleInRange(); // 0.719213632334785\nrandomDoubleInRange(min: 2.4, max: 9.8); // 6.21315328537085"
+        },
+        "tags": [
+          "mat",
+          "utility",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "658bd9a4a71cec2ec00e23332bec06d037c1d4be9724e5c328216e74e148608c",
+        "firstSeen": "1579630718",
+        "lastUpdated": "1579630718",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "randomIntInRange",
+      "title": "randomIntInRange",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "randomIntInRange.md",
+        "text": "Returns a random integer in the specified range.\n\nUse `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range, using `num.floor()` to make it an integer.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math';\n\nint randomIntInRange({int min = 0, int max = 100}) {\n  return (new Random().nextDouble() * (max - min + 1) + min).floor();\n}",
+          "example": "randomIntInRange(); // 90\nrandomIntInRange(min: 10, max: 30); // 23"
+        },
+        "tags": [
+          "mat",
+          "utility",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "f34461c86bbcdbbc3f5d9eb2a0e36061f77c0312f1e845c5180d40390eb7f32b",
+        "firstSeen": "1579630718",
+        "lastUpdated": "1579630718",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "sum",
       "title": "sum",
       "type": "snippet",

@@ -130,6 +130,40 @@
       }
     },
     {
+      "id": "randomDoubleInRange",
+      "type": "snippetListing",
+      "title": "randomDoubleInRange",
+      "attributes": {
+        "text": "Returns a random double in the specified range.\n\nUse `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range.\nOmit the optional parameter, `min`, to use a default minimu value of `0.0`.\nOmit the optional parameter, `max`, to use a default maximum value of `1.0`.\n\n",
+        "tags": [
+          "mat",
+          "utility",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "658bd9a4a71cec2ec00e23332bec06d037c1d4be9724e5c328216e74e148608c"
+      }
+    },
+    {
+      "id": "randomIntInRange",
+      "type": "snippetListing",
+      "title": "randomIntInRange",
+      "attributes": {
+        "text": "Returns a random integer in the specified range.\n\nUse `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range, using `num.floor()` to make it an integer.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
+        "tags": [
+          "mat",
+          "utility",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "f34461c86bbcdbbc3f5d9eb2a0e36061f77c0312f1e845c5180d40390eb7f32b"
+      }
+    },
+    {
       "id": "sum",
       "type": "snippetListing",
       "title": "sum",
