@@ -1,6 +1,6 @@
 ---
 title: capitalize
-tags: utility,intermediate
+tags: string,beginner
 ---
 
 Capitalizes the first letter of a string.
