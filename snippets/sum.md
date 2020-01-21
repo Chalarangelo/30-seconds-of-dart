@@ -9,9 +9,7 @@ Use `iterable.reduce()` to sum all the numbers in a list.
 
 ```dart
 num sum(List<num> nums){
-  return nums.reduce(
-    (num a, num b) => a + b
-  );
+  return nums.reduce((num a, num b) => a + b);
 }
 ```
 
