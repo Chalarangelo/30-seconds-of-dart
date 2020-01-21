@@ -243,6 +243,70 @@
       "meta": {
         "hash": "fb15cf3dd1c7c91be045da40ce6894c3ecb2ad84ed5739609e8696493bbb83a5"
       }
+    },
+    {
+      "id": "toCamelCase",
+      "type": "snippetListing",
+      "title": "toCamelCase",
+      "attributes": {
+        "text": "Converts a string to camelcase.\n\nUse `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.\nUse `String.replaceAll()` to remove invalid separator characters (`_`, `-` and spaces).\nFinally, use `String.toLowerCase()` and to convert the first letter to lowercase.\n\n",
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "5dfc8907f30daf76bce852b01d71625aecebc2cc53165800c0a81fec4c67643e"
+      }
+    },
+    {
+      "id": "toKebabCase",
+      "type": "snippetListing",
+      "title": "toKebabCase",
+      "attributes": {
+        "text": "Converts a string to kebab case.\n\nUse `String.replaceAllMapped()` to break the string into words and `String.toLowerCase()` to convert each one to lowercase, using a `RegExp`.\nUse `String.replaceAll()` to replace invalid separator characters (`_` and spaces). with hyphens\n\n",
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "cb97be345b36154d9a44989065525396279ef9efd0a5ac0cddfd641d0cc5c8e8"
+      }
+    },
+    {
+      "id": "toSnakeCase",
+      "type": "snippetListing",
+      "title": "toSnakeCase",
+      "attributes": {
+        "text": "Converts a string to snake case.\n\nUse `String.replaceAllMapped()` to break the string into words and `String.toLowerCase()` to convert each one to lowercase, using a `RegExp`.\nUse `String.replaceAll()` to replace invalid separator characters (`-` and spaces) with underscores.\n\n",
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "5db61f65f5d435c0985f1a9f465087b55cd1e6a1d0c1e7b7c77e6e74354771bc"
+      }
+    },
+    {
+      "id": "toTitleCase",
+      "type": "snippetListing",
+      "title": "toTitleCase",
+      "attributes": {
+        "text": "Converts a string to title case.\n\nUse `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.\nUse `String.replaceAll()` to replace invalid separator characters (`-` and `_`) with spaces.\n\n",
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "f55dff187108db931e8e627a72f373f07bae9d28f0619e72e6ba9047f6194171"
+      }
     }
   ],
   "meta": {

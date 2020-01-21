@@ -378,6 +378,106 @@
         "updateCount": 3,
         "authorCount": 2
       }
+    },
+    {
+      "id": "toCamelCase",
+      "title": "toCamelCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "toCamelCase.md",
+        "text": "Converts a string to camelcase.\n\nUse `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.\nUse `String.replaceAll()` to remove invalid separator characters (`_`, `-` and spaces).\nFinally, use `String.toLowerCase()` and to convert the first letter to lowercase.\n\n",
+        "codeBlocks": {
+          "code": "String toCamelCase(String str) {\n  String s = str\n      .replaceAllMapped(\n          new RegExp(\n              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) =>\n              \"${m[0][0].toUpperCase()}${m[0].substring(1).toLowerCase()}\")\n      .replaceAll(new RegExp(r'(_|-|\\s)+'), '');\n  return s[0].toLowerCase() + s.substring(1);\n}",
+          "example": "toCamelCase('some_database_field_name'); // 'someDatabaseFieldName'\ntoCamelCase('Some label that needs to be camelized'); // 'someLabelThatNeedsToBeCamelized'\ntoCamelCase('some-javascript-property'); // 'someJavascriptProperty'\ntoCamelCase('some-mixed_string with spaces_underscores-and-hyphens'); // 'someMixedStringWithSpacesUnderscoresAndHyphens'"
+        },
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "5dfc8907f30daf76bce852b01d71625aecebc2cc53165800c0a81fec4c67643e",
+        "firstSeen": "1579634104",
+        "lastUpdated": "1579634104",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "toKebabCase",
+      "title": "toKebabCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "toKebabCase.md",
+        "text": "Converts a string to kebab case.\n\nUse `String.replaceAllMapped()` to break the string into words and `String.toLowerCase()` to convert each one to lowercase, using a `RegExp`.\nUse `String.replaceAll()` to replace invalid separator characters (`_` and spaces). with hyphens\n\n",
+        "codeBlocks": {
+          "code": "String toKebabCase(String str) {\n  return str\n      .replaceAllMapped(\n          new RegExp(\n              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) => \"${m[0].toLowerCase()}\")\n      .replaceAll(new RegExp(r'(_|\\s)+'), '-');\n}",
+          "example": "toKebabCase('camelCase'); // 'camel-case'\ntoKebabCase('some text'); // 'some-text'\ntoKebabCase('some-mixed_string With spaces_underscores-and-hyphens'); // 'some-mixed-string-with-spaces-underscores-and-hyphens'"
+        },
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "cb97be345b36154d9a44989065525396279ef9efd0a5ac0cddfd641d0cc5c8e8",
+        "firstSeen": "1579634104",
+        "lastUpdated": "1579634104",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "toSnakeCase",
+      "title": "toSnakeCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "toSnakeCase.md",
+        "text": "Converts a string to snake case.\n\nUse `String.replaceAllMapped()` to break the string into words and `String.toLowerCase()` to convert each one to lowercase, using a `RegExp`.\nUse `String.replaceAll()` to replace invalid separator characters (`-` and spaces) with underscores.\n\n",
+        "codeBlocks": {
+          "code": "String toSnakeCase(String str) {\n  return str\n      .replaceAllMapped(\n          new RegExp(\n              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) => \"${m[0].toLowerCase()}\")\n      .replaceAll(new RegExp(r'(-|\\s)+'), '_');\n}",
+          "example": "toSnakeCase('camelCase'); // 'camel_case'\ntoSnakeCase('some text'); // 'some_text'\ntoSnakeCase('some-mixed_string With spaces_underscores-and-hyphens'); // 'some_mixed_string_with_spaces_underscores_and_hyphens'"
+        },
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "5db61f65f5d435c0985f1a9f465087b55cd1e6a1d0c1e7b7c77e6e74354771bc",
+        "firstSeen": "1579634104",
+        "lastUpdated": "1579634104",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "toTitleCase",
+      "title": "toTitleCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "toTitleCase.md",
+        "text": "Converts a string to title case.\n\nUse `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.\nUse `String.replaceAll()` to replace invalid separator characters (`-` and `_`) with spaces.\n\n",
+        "codeBlocks": {
+          "code": "String toTitleCase(String str) {\n  return str\n      .replaceAllMapped(\n          new RegExp(\n              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) =>\n              \"${m[0][0].toUpperCase()}${m[0].substring(1).toLowerCase()}\")\n      .replaceAll(new RegExp(r'(_|-)+'), ' ');\n}",
+          "example": "toTitleCase('some_database_field_name'); // 'Some Database Field Name'\ntoTitleCase('Some label that needs to be title-cased'); // 'Some Label That Needs To Be Title Cased'\ntoTitleCase('some-package-name'); // 'Some Package Name'\ntoTitleCase('some-mixed_string with spaces_underscores-and-hyphens'); // 'Some Mixed String With Spaces Underscores And Hyphens'"
+        },
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "f55dff187108db931e8e627a72f373f07bae9d28f0619e72e6ba9047f6194171",
+        "firstSeen": "1579634104",
+        "lastUpdated": "1579634104",
+        "updateCount": 2,
+        "authorCount": 2
+      }
     }
   ],
   "meta": {
