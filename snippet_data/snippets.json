@@ -1,6 +1,57 @@
 {
   "data": [
     {
+      "id": "average",
+      "title": "average",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "average.md",
+        "text": "Returns the average value of a list of numbers.\n\nUse `iterable.reduce()` to get the sum of all the numbers in a list, divide by `iterable.length` to get the average.\n\n",
+        "codeBlocks": {
+          "code": "num average(List<num> nums){\n  return nums.reduce((num a, num b) => a + b) / nums.length;\n}",
+          "example": "average([1, 2, 3, 4]); // 2.5"
+        },
+        "tags": [
+          "math",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "d2866701059e40ef5439560e73a896863b6ce2e04ae6bbbfd52e63bc88fb4afb",
+        "firstSeen": "1579626973",
+        "lastUpdated": "1579627955",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "averageBy",
+      "title": "averageBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "averageBy.md",
+        "text": "Returns the average of a list, after mapping each element to a number using the provided function.\n\nUse `iterable.map()` to map each element to the numeric value returned by `fn`, `iterable.reduce()` to sum the values, divide by `iterable.length` to get the average.\n\n",
+        "codeBlocks": {
+          "code": "num averageBy<T>(List<T> lst, num Function(T) fn) {\n  return lst.map(fn).reduce((num a, num b) => a + b) / lst.length;\n}",
+          "example": "averageBy([ {'n': 4}, {'n': 2}, {'n': 8}, {'n': 6} ], (o) => o['n']); // 5"
+        },
+        "tags": [
+          "math",
+          "list",
+          "function",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "c10d973c2257a96fd40d7d964e1b396bbfaedd5f245ebd4649fdde8323a670df",
+        "firstSeen": "1579628185",
+        "lastUpdated": "1579628185",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "isEven",
       "title": "isEven",
       "type": "snippet",
@@ -18,10 +69,10 @@
       },
       "meta": {
         "hash": "81e2ea61320bff6729ee966a17d4918ff94f5fef16ea78f72217e280a3106f22",
-        "firstSeen": "",
-        "lastUpdated": "",
-        "updateCount": 1,
-        "authorCount": 1
+        "firstSeen": "1579614060",
+        "lastUpdated": "1579614060",
+        "updateCount": 2,
+        "authorCount": 2
       }
     },
     {
@@ -42,10 +93,163 @@
       },
       "meta": {
         "hash": "a19d0b0952202d1e40cd20692b47454fae53b7a5ff39d2acf65e608cb0fd44aa",
-        "firstSeen": "",
-        "lastUpdated": "",
-        "updateCount": 1,
-        "authorCount": 1
+        "firstSeen": "1579614060",
+        "lastUpdated": "1579614060",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "max",
+      "title": "max",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "max.md",
+        "text": "Returns the maximum value in a list of numbers.\n\nUse `iterable.reduce()` in combination with `math.max()` to find the maximum value.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math' as math;\n\nnum max(List<num> nums){\n  return nums.reduce(math.max);\n}",
+          "example": "max([4, 6, 1, 2, 5]); // 6"
+        },
+        "tags": [
+          "math",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "93179c9e5958873e2bfb10f25039e637c59377a37c1f0cdf835589f5f5a65258",
+        "firstSeen": "1579626973",
+        "lastUpdated": "1579626973",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "maxBy",
+      "title": "maxBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "maxBy.md",
+        "text": "Returns the maximum value of a list, after mapping each element to a number using the provided function.\n\nUse `iterable.map()` to map each element to the numeric value returned by `fn`, `math.max()` to find the maximum value.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math' as math;\n\nnum maxBy<T>(List<T> lst, num Function(T) fn) {\n  return lst.map(fn).reduce(math.max);\n}",
+          "example": "maxBy([ {'n': 4}, {'n': 2}, {'n': 8}, {'n': 6} ], (o) => o['n']); // 8"
+        },
+        "tags": [
+          "math",
+          "list",
+          "function",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "6d33edbb4c822bf35271ea4b605dca75c76b9f688428159275ce5796b3926879",
+        "firstSeen": "1579628185",
+        "lastUpdated": "1579628185",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "min",
+      "title": "min",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "min.md",
+        "text": "Returns the minimum value in a list of numbers.\n\nUse `iterable.reduce()` in combination with `math.min()` to find the minimum value.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math' as math;\n\nnum min(List<num> nums){\n  return nums.reduce(math.min);\n}",
+          "example": "min([4, 6, 1, 2, 5]); // 1"
+        },
+        "tags": [
+          "math",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "cc987dbd0de7626643ca3ba60321d896ae8e2234dfea53b654a3219bb5321a89",
+        "firstSeen": "1579626973",
+        "lastUpdated": "1579626973",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "minBy",
+      "title": "minBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "minBy.md",
+        "text": "Returns the minimum value of a list, after mapping each element to a number using the provided function.\n\nUse `iterable.map()` to map each element to the numeric value returned by `fn`, `math.min()` to find the minimum value.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math' as math;\n\nnum minBy<T>(List<T> lst, num Function(T) fn) {\n  return lst.map(fn).reduce(math.min);\n}",
+          "example": "minBy([ {'n': 4}, {'n': 2}, {'n': 8}, {'n': 6} ], (o) => o['n']); // 8"
+        },
+        "tags": [
+          "math",
+          "list",
+          "function",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "0a738fbe4e38e6c564acc5fe292c0b0291080989197c533ab6a63e08b9a66b82",
+        "firstSeen": "1579628185",
+        "lastUpdated": "1579628185",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "sum",
+      "title": "sum",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "sum.md",
+        "text": "Returns the sum value of a list of numbers.\n\nUse `iterable.reduce()` to sum all the numbers in a list.\n\n",
+        "codeBlocks": {
+          "code": "num sum(List<num> nums){\n  return nums.reduce((num a, num b) => a + b);\n}",
+          "example": "sum([1, 2, 3, 4]); // 10"
+        },
+        "tags": [
+          "math",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "274f2625576afe02e9d8036e426a2f6d0ea9be26bfe6abe78f63dbceb5008a07",
+        "firstSeen": "1579626973",
+        "lastUpdated": "1579627955",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "sumBy",
+      "title": "sumBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "sumBy.md",
+        "text": "Returns the sum of a list, after mapping each element to a number using the provided function.\n\nUse `iterable.map()` to map each element to the numeric value returned by `fn`, `iterable.reduce()` to sum the values.\n\n",
+        "codeBlocks": {
+          "code": "num sumBy<T>(List<T> lst, num Function(T) fn) {\n  return lst.map(fn).reduce((num a, num b) => a + b);\n}",
+          "example": "sumBy([ {'n': 4}, {'n': 2}, {'n': 8}, {'n': 6} ], (o) => o['n']); // 20"
+        },
+        "tags": [
+          "math",
+          "list",
+          "function",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "fbf7c20571477d7d4a33c6c73fe78862e26da45f2fddd2079e2af75b8b18678a",
+        "firstSeen": "1579628185",
+        "lastUpdated": "1579628185",
+        "updateCount": 2,
+        "authorCount": 2
       }
     }
   ],
