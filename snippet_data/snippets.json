@@ -52,6 +52,30 @@
       }
     },
     {
+      "id": "capitalize",
+      "title": "capitalize",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "capitalize.md",
+        "text": "Capitalizes the first letter of a string.\n\nUse `String.toUpperCase()` to capitalize first letter and `String.toLowerCase()` to convert the rest of the string to lowercase, if necessary.\nOmit the optional parameter, `lowerRest`, to keep the rest of the string intact, or set it to `true` to convert to lowercase.\n\n\nconst capitalize = ([first, ...res\n\n",
+        "codeBlocks": {
+          "code": "String capitalize(String str, {bool lowerRest = false}) {\n  return str[0].toUpperCase() +\n      (lowerRest ? str.substring(1).toLowerCase() : str.substring(1));\n}",
+          "example": "capitalize('fooBar'); // 'FooBar'\ncapitalize('fooBar', lowerRest: true); // 'Foobar'"
+        },
+        "tags": [
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "f82ab66357c89f0892f0339fa5a3b47ab2569a96a9717a0914e6072b9cb2a2c9",
+        "firstSeen": "1579632223",
+        "lastUpdated": "1579632223",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "isEven",
       "title": "isEven",
       "type": "snippet",
