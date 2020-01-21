@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": "isEven",
+      "title": "isEven",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "isEven.md",
+        "text": "Returns `true` if the given number is even, `false` otherwise.\n\nChecks whether a number is odd or even using the modulo (`%`) operator. \nReturns `true` if the number is even, `false` if the number is odd.\n\n",
+        "codeBlocks": {
+          "code": "bool isEven(num n) {\n  return n % 2 == 0;\n}",
+          "example": "isEven(3); // false"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "81e2ea61320bff6729ee966a17d4918ff94f5fef16ea78f72217e280a3106f22",
+        "firstSeen": "",
+        "lastUpdated": "",
+        "updateCount": 1,
+        "authorCount": 1
+      }
+    },
+    {
+      "id": "isOdd",
+      "title": "isOdd",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "isOdd.md",
+        "text": "Returns `true` if the given number is odd, `false` otherwise.\n\nChecks whether a number is odd or even using the modulo (`%`) operator. \nReturns `true` if the number is odd, `false` if the number is even.\n\n",
+        "codeBlocks": {
+          "code": "bool isOdd(num n) {\n  return n % 2 != 0;\n}",
+          "example": "isOdd(3); // true"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "a19d0b0952202d1e40cd20692b47454fae53b7a5ff39d2acf65e608cb0fd44aa",
+        "firstSeen": "",
+        "lastUpdated": "",
+        "updateCount": 1,
+        "authorCount": 1
+      }
+    }
+  ],
+  "meta": {
+    "specification": "http://jsonapi.org/format/",
+    "type": "snippetArray",
+    "language": {
+      "short": "dart",
+      "long": "Dart"
+    }
+  }
+}

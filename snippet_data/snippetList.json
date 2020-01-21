@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "id": "isEven",
+      "type": "snippetListing",
+      "title": "isEven",
+      "attributes": {
+        "text": "Returns `true` if the given number is even, `false` otherwise.\n\nChecks whether a number is odd or even using the modulo (`%`) operator. \nReturns `true` if the number is even, `false` if the number is odd.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "81e2ea61320bff6729ee966a17d4918ff94f5fef16ea78f72217e280a3106f22"
+      }
+    },
+    {
+      "id": "isOdd",
+      "type": "snippetListing",
+      "title": "isOdd",
+      "attributes": {
+        "text": "Returns `true` if the given number is odd, `false` otherwise.\n\nChecks whether a number is odd or even using the modulo (`%`) operator. \nReturns `true` if the number is odd, `false` if the number is even.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "a19d0b0952202d1e40cd20692b47454fae53b7a5ff39d2acf65e608cb0fd44aa"
+      }
+    }
+  ],
+  "meta": {
+    "specification": "http://jsonapi.org/format/",
+    "type": "snippetListingArray",
+    "language": {
+      "short": "dart",
+      "long": "Dart"
+    }
+  }
+}
