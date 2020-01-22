@@ -64,6 +64,22 @@
       }
     },
     {
+      "id": "isAnagram",
+      "type": "snippetListing",
+      "title": "isAnagram",
+      "attributes": {
+        "text": "Checks if a string is an anagram of another string (case-insensitive, ignores spaces, punctuation and special characters).\n\nUse `String.toLowerCase()` and `String.prototype.replaceAll()` with an appropriate regular expression to remove unnecessary characters and convert the string to lowercase.\nUse `String.split('')`, `Iterable.sort()`, in combination with the cascade operator (`..`) and `Iterable.join('')` to normalize both strings and check if their normalized forms are equal.\n\n",
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "469cb8b909b21088952cb59b367c5900401f7a4437053f1ee69e0de918f55cde"
+      }
+    },
+    {
       "id": "isEven",
       "type": "snippetListing",
       "title": "isEven",

@@ -100,6 +100,31 @@
       }
     },
     {
+      "id": "isAnagram",
+      "title": "isAnagram",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "isAnagram.md",
+        "text": "Checks if a string is an anagram of another string (case-insensitive, ignores spaces, punctuation and special characters).\n\nUse `String.toLowerCase()` and `String.prototype.replaceAll()` with an appropriate regular expression to remove unnecessary characters and convert the string to lowercase.\nUse `String.split('')`, `Iterable.sort()`, in combination with the cascade operator (`..`) and `Iterable.join('')` to normalize both strings and check if their normalized forms are equal.\n\n",
+        "codeBlocks": {
+          "code": "bool isAnagram(String str1, String str2) {\n  String normalize(String str) => (str\n          .toLowerCase()\n          .replaceAll(new RegExp(r'[^a-z0-9]', caseSensitive: false), '')\n          .split('')\n            ..sort())\n      .join('');\n  return normalize(str1) == normalize(str2);\n}",
+          "example": "isAnagram('iceman', 'cinema'); // true"
+        },
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "469cb8b909b21088952cb59b367c5900401f7a4437053f1ee69e0de918f55cde",
+        "firstSeen": "1579683169",
+        "lastUpdated": "1579683169",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "isEven",
       "title": "isEven",
       "type": "snippet",
