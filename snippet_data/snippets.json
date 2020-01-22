@@ -174,6 +174,30 @@
       }
     },
     {
+      "id": "isLowerCase",
+      "title": "isLowerCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "isLowerCase.md",
+        "text": "Checks if a string is lower case.\n\nConvert the given string to lower case, using `String.toLowerCase()` and compare it to the original.\n\n",
+        "codeBlocks": {
+          "code": "bool isLowerCase(String str) {\n  return str == str.toLowerCase();\n}",
+          "example": "isLowerCase('abc'); // true\nisLowerCase('a3@$'); // true\nisLowerCase('Ab4'); // false"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e5f1b2a57cb1606e3bf8065174f6b286c8ac9b0c4125ebb7375e543682d685f5",
+        "firstSeen": "1579703353",
+        "lastUpdated": "1579703353",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "isOdd",
       "title": "isOdd",
       "type": "snippet",
@@ -217,6 +241,30 @@
         "hash": "357be655419520a56ad13b32f4229d790e68b97006583f97fcb48a9da435baef",
         "firstSeen": "1579679384",
         "lastUpdated": "1579679384",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "isUpperCase",
+      "title": "isUpperCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "isUpperCase.md",
+        "text": "Checks if a string is upper case.\n\nConvert the given string to upper case, using `String.toUpperCase()` and compare it to the original.\n\n",
+        "codeBlocks": {
+          "code": "bool isUpperCase(String str) {\n  return str == str.toUpperCase();\n}",
+          "example": "isUpperCase('ABC'); // true\nisUpperCase('A3@$'); // true\nisUpperCase('aB4'); // false"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "856c4cdd2a615a427bc09e5116c560533befc5f01a1e5ee483e9318b98287f9b",
+        "firstSeen": "1579703353",
+        "lastUpdated": "1579703353",
         "updateCount": 2,
         "authorCount": 2
       }
@@ -372,6 +420,30 @@
         "firstSeen": "1579628185",
         "lastUpdated": "1579631549",
         "updateCount": 4,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "pad",
+      "title": "pad",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "pad.md",
+        "text": "Pads a string on both sides with the specified `padding`, if it's shorter than the specified `length`.\n\nUse `String.padLeft()` and `String.padRight()` to pad both sides of the given string. \nOmit the optional parameter, `padding`, to use the whitespace as the default padding.\n\n",
+        "codeBlocks": {
+          "code": "String pad(String str, int length, {String padding = ' '}) {\n  return str\n      .padLeft(((str.length + length) / 2).floor(), padding)\n      .padRight(length, padding);\n}",
+          "example": "pad('cat', 8); // '  cat   '\npad(String(42), 6, padding: '0'); // '004200'\npad('foobar', 3); // 'foobar'"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "35b0173d85a332c04a9b89ce067d69b2b86e969b6c9d35598e3939acb5b991cb",
+        "firstSeen": "1579703357",
+        "lastUpdated": "1579703357",
+        "updateCount": 2,
         "authorCount": 2
       }
     },
@@ -647,6 +719,30 @@
         "hash": "f55dff187108db931e8e627a72f373f07bae9d28f0619e72e6ba9047f6194171",
         "firstSeen": "1579634104",
         "lastUpdated": "1579634104",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "truncateString",
+      "title": "truncateString",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "truncateString.md",
+        "text": "Truncates a string up to a specified length.\n\nDetermine if the string's `length` is greater than `num`. \nReturn the string truncated to the desired length, with `'...'` appended to the end or the original string.\n\n",
+        "codeBlocks": {
+          "code": "String truncateString(String str, int num) {\n  return str.length > num\n      ? str.substring(0, num > 3 ? num - 3 : num) + '...'\n      : str;\n}",
+          "example": "truncateString('boomerang', 7); // 'boom...'"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "12f8fd6f79899f2f9a894a9903a5f355ae4f360285a9474936e446301fee574c",
+        "firstSeen": "1579703363",
+        "lastUpdated": "1579703363",
         "updateCount": 2,
         "authorCount": 2
       }
