@@ -227,6 +227,21 @@
       }
     },
     {
+      "id": "reverseString",
+      "type": "snippetListing",
+      "title": "reverseString",
+      "attributes": {
+        "text": "Reverses a string.\n\nUse `String.split('')` and `Iterable.reversed` to reverse the order of the runes in the string.\nUse `Iterable.join('')` to combine the runes and get the reversed string.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "ce2cfa0ccc61075fb46ef9f64d99cb9b4f89c4eaf2370eb2aa76634b9e63fde5"
+      }
+    },
+    {
       "id": "sum",
       "type": "snippetListing",
       "title": "sum",

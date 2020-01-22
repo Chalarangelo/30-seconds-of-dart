@@ -353,6 +353,30 @@
       }
     },
     {
+      "id": "reverseString",
+      "title": "reverseString",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "reverseString.md",
+        "text": "Reverses a string.\n\nUse `String.split('')` and `Iterable.reversed` to reverse the order of the runes in the string.\nUse `Iterable.join('')` to combine the runes and get the reversed string.\n\n",
+        "codeBlocks": {
+          "code": "String reverseString(String str) {\n  return str.split('').reversed.join('');\n}",
+          "example": "reverseString('foobar'); // 'raboof'"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "ce2cfa0ccc61075fb46ef9f64d99cb9b4f89c4eaf2370eb2aa76634b9e63fde5",
+        "firstSeen": "1579679557",
+        "lastUpdated": "1579679557",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "sum",
       "title": "sum",
       "type": "snippet",
