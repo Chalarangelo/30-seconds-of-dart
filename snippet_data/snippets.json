@@ -148,6 +148,30 @@
       }
     },
     {
+      "id": "isPalindrome",
+      "title": "isPalindrome",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "isPalindrome.md",
+        "text": "Returns `true` if the given string is a palindrome, `false` otherwise.\n\nUse `String.toLowerCase()` to convert the given string to lowercase, `String.replaceAll()` to remove non-alphanumeric characters.\nUse `String.split('')`, `Iterable.reversed` and `Iterable.join('')` to reverse it and compare it to the unreversed string.\n\n",
+        "codeBlocks": {
+          "code": "bool isPalindrome(String str) {\n  String s = str.toLowerCase().replaceAll(new RegExp(r'[\\W_]'), '');\n  return s == s.split('').reversed.join('');\n}",
+          "example": "isPalindrome('taco cat'); // true"
+        },
+        "tags": [
+          "string",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "357be655419520a56ad13b32f4229d790e68b97006583f97fcb48a9da435baef",
+        "firstSeen": "1579679384",
+        "lastUpdated": "1579679384",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "mapString",
       "title": "mapString",
       "type": "snippet",
