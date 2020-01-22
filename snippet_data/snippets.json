@@ -76,6 +76,31 @@
       }
     },
     {
+      "id": "compactWhitespace",
+      "title": "compactWhitespace",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "compactWhitespace.md",
+        "text": "Returns a string with whitespaces compacted.\n\nUse `String.replaceAll()` with a regular expression to replace all occurrences of 2 or more whitespace characters with a single space.\n\n",
+        "codeBlocks": {
+          "code": "String compactWhitespace(String str) {\n  return str.replaceAll(new RegExp(r'\\s{2,}'), ' ');\n}",
+          "example": "compactWhitespace('Lorem    Ipsum'); // 'Lorem Ipsum'\ncompactWhitespace('Lorem \\n Ipsum'); // 'Lorem Ipsum'"
+        },
+        "tags": [
+          "string",
+          "regexp",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "a107b15108358109198dd38a394f94bc95e3b9cb3fb7eed4dbe44e2679b6122c",
+        "firstSeen": "1579691307",
+        "lastUpdated": "1579691307",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "decapitalize",
       "title": "decapitalize",
       "type": "snippet",
