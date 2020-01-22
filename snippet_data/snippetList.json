@@ -38,14 +38,14 @@
       "type": "snippetListing",
       "title": "capitalize",
       "attributes": {
-        "text": "Capitalizes the first letter of a string.\n\nUse `String.toUpperCase()` to capitalize first letter and `String.toLowerCase()` to convert the rest of the string to lowercase, if necessary.\nOmit the optional parameter, `lowerRest`, to keep the rest of the string intact, or set it to `true` to convert to lowercase.\n\n\nconst capitalize = ([first, ...res\n\n",
+        "text": "Capitalizes the first letter of a string.\n\nUse `String.toUpperCase()` to capitalize first letter and `String.toLowerCase()` to convert the rest of the string to lowercase, if necessary.\nOmit the optional parameter, `lowerRest`, to keep the rest of the string intact, or set it to `true` to convert to lowercase.\n\n",
         "tags": [
           "string",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "f82ab66357c89f0892f0339fa5a3b47ab2569a96a9717a0914e6072b9cb2a2c9"
+        "hash": "ddfd4d1e5248a64ad0fb9cd624a3568c50e82c7934cdedb422cdede7d69f63d0"
       }
     },
     {
@@ -53,14 +53,14 @@
       "type": "snippetListing",
       "title": "decapitalize",
       "attributes": {
-        "text": "Decapitalizes the first letter of a string.\n\nUse `String.toLowerCase()` to decapitalize first letter and `String.toUpperCase()` to convert the rest of the string to uppercase, if necessary.\nOmit the optional parameter, `upperRest`, to keep the rest of the string intact, or set it to `true` to convert to uppercase.\n\n\nconst capitalize = ([first, ...res\n\n",
+        "text": "Decapitalizes the first letter of a string.\n\nUse `String.toLowerCase()` to decapitalize first letter and `String.toUpperCase()` to convert the rest of the string to uppercase, if necessary.\nOmit the optional parameter, `upperRest`, to keep the rest of the string intact, or set it to `true` to convert to uppercase.\n\n",
         "tags": [
           "string",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "b992eeded58638cda05541970bbe4f4b28c9a4a5a2f5c995294cdaaa518ea50f"
+        "hash": "73456bc53b9feb0769f3588638f57b863ee25fe7a0579ca6b21daf9e1034e053"
       }
     },
     {
@@ -336,6 +336,22 @@
       },
       "meta": {
         "hash": "f55dff187108db931e8e627a72f373f07bae9d28f0619e72e6ba9047f6194171"
+      }
+    },
+    {
+      "id": "words",
+      "type": "snippetListing",
+      "title": "words",
+      "attributes": {
+        "text": "Converts a given string into a list of words.\n\nUse `String.split()` with the supplied `pattern` to convert to a list of strings. \nUse `Iterable.where()` in combination with `String.isNotEmpty` to remove any empty strings. \nFinally, convert to a list using `Iterable.toList()`.\nOmit the optional parameter, `pattern`, to use the default regular expression (non-alphanumeric characters).\n\n",
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "cf330144c90b90e201d24c6f34cfd91217755c64015080d747047398a6e43ceb"
       }
     }
   ],
