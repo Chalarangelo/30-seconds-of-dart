@@ -477,6 +477,30 @@
       }
     },
     {
+      "id": "splitLines",
+      "title": "splitLines",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "splitLines.md",
+        "text": "Splits a multiline string into a list of lines.\n\nUse `String.split()` and a regular expression to match line breaks and create a list.\n\n",
+        "codeBlocks": {
+          "code": "List<String> splitLines(String str) {\n  return str.split(new RegExp(r'\\r?\\n'));\n}",
+          "example": "splitLines('This\\nis a\\nmultiline\\nstring.\\n'); // ['This', 'is a', 'multiline', 'string.' , '']"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "d69d493ab0ce88e04d6df5eccb4a66c14996a6070995c712a555c29a4856b4da",
+        "firstSeen": "1579691995",
+        "lastUpdated": "1579691995",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "sum",
       "title": "sum",
       "type": "snippet",

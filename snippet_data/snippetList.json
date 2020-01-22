@@ -306,6 +306,21 @@
       }
     },
     {
+      "id": "splitLines",
+      "type": "snippetListing",
+      "title": "splitLines",
+      "attributes": {
+        "text": "Splits a multiline string into a list of lines.\n\nUse `String.split()` and a regular expression to match line breaks and create a list.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "d69d493ab0ce88e04d6df5eccb4a66c14996a6070995c712a555c29a4856b4da"
+      }
+    },
+    {
       "id": "sum",
       "type": "snippetListing",
       "title": "sum",
