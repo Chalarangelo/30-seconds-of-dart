@@ -125,6 +125,81 @@
       }
     },
     {
+      "id": "digitize",
+      "title": "digitize",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "digitize.md",
+        "text": "Converts an integer to a list of digits.\n\nUse string interpolation to convert the integer to a string, `String.split('')` to convert it into a list.\nUse `Iterable.map()` and `int.parse()` to transform each value to an integer, `Iterable.toList()` to return a list.\n\n",
+        "codeBlocks": {
+          "code": "List<int> digitze(int n) {\n  return \"${n}\".split('').map((s) => int.parse(s)).toList();\n}",
+          "example": "digitize(123); // [1, 2, 3]"
+        },
+        "tags": [
+          "math",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "f086785dd97709ad42f07477489d518ecf45791c878ebb74a71a27074a56000f",
+        "firstSeen": "1579704973",
+        "lastUpdated": "1579704973",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "factorial",
+      "title": "factorial",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "factorial.md",
+        "text": "Calculates the factorial of an integer.\n\nUse recursion. \nIf `n` is less than or equal to `1`, return `1`. \nOtherwise, return the product of `n` and the factorial of `n-1`. \nThrows an exception if `n` is a negative number.\n\n",
+        "codeBlocks": {
+          "code": "int factorial(int n) {\n  if (n < 0) throw ('Negative numbers are not allowed.');\n  return n <= 1 ? 1 : n * factorial(n - 1);\n}",
+          "example": "factorial(6); // 720"
+        },
+        "tags": [
+          "math",
+          "recursion",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "5fcfb984b0bf0903f20e2033c2e76995dbc3fe75918d3e26ae35e69969bad565",
+        "firstSeen": "1579704597",
+        "lastUpdated": "1579704597",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "fibonacci",
+      "title": "fibonacci",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "fibonacci.md",
+        "text": "Generates a list, containing the Fibonacci sequence, up until the nth term.\n\nUse `List.generate()` to generate a new list with `n` terms, using a function that returns the sum of the last two values, except for the first two.\n\n",
+        "codeBlocks": {
+          "code": "List<int> fibonacci(int n) {\n  int last = 1;\n  int last2 = 0;\n  return new List<int>.generate(n, (int i) {\n    if (i < 2) return i;\n    int curr = last + last2;\n    last2 = last;\n    last = curr;\n    return curr;\n  });\n}",
+          "example": "fibonacci(6); // [0, 1, 1, 2, 3, 5]"
+        },
+        "tags": [
+          "math",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "83f28d90014d096802f67334981f487f34b733511daa6b6276b97d5138dc3041",
+        "firstSeen": "1579705610",
+        "lastUpdated": "1579705610",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "isAnagram",
       "title": "isAnagram",
       "type": "snippet",

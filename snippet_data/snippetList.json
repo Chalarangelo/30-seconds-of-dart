@@ -80,6 +80,54 @@
       }
     },
     {
+      "id": "digitize",
+      "type": "snippetListing",
+      "title": "digitize",
+      "attributes": {
+        "text": "Converts an integer to a list of digits.\n\nUse string interpolation to convert the integer to a string, `String.split('')` to convert it into a list.\nUse `Iterable.map()` and `int.parse()` to transform each value to an integer, `Iterable.toList()` to return a list.\n\n",
+        "tags": [
+          "math",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "f086785dd97709ad42f07477489d518ecf45791c878ebb74a71a27074a56000f"
+      }
+    },
+    {
+      "id": "factorial",
+      "type": "snippetListing",
+      "title": "factorial",
+      "attributes": {
+        "text": "Calculates the factorial of an integer.\n\nUse recursion. \nIf `n` is less than or equal to `1`, return `1`. \nOtherwise, return the product of `n` and the factorial of `n-1`. \nThrows an exception if `n` is a negative number.\n\n",
+        "tags": [
+          "math",
+          "recursion",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "5fcfb984b0bf0903f20e2033c2e76995dbc3fe75918d3e26ae35e69969bad565"
+      }
+    },
+    {
+      "id": "fibonacci",
+      "type": "snippetListing",
+      "title": "fibonacci",
+      "attributes": {
+        "text": "Generates a list, containing the Fibonacci sequence, up until the nth term.\n\nUse `List.generate()` to generate a new list with `n` terms, using a function that returns the sum of the last two values, except for the first two.\n\n",
+        "tags": [
+          "math",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "83f28d90014d096802f67334981f487f34b733511daa6b6276b97d5138dc3041"
+      }
+    },
+    {
       "id": "isAnagram",
       "type": "snippetListing",
       "title": "isAnagram",
