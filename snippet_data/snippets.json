@@ -224,6 +224,31 @@
       }
     },
     {
+      "id": "mask",
+      "title": "mask",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "mask.md",
+        "text": "Replaces all but the last `num` runes of a string with the specified `mask`.\n\nUse `String.substring()` to grab the last `num` runes, `String.padLeft()` to fill the beginning of the string with the `mask` up to the original length.\nOmit the optional parameter, `num`, to keep a default of `4` runes unmasked.\nOmit the optional parameter, `mask`, to use the default of `'*'`.\n\n",
+        "codeBlocks": {
+          "code": "String mask(String str, {int num = 4, String mask = '*'}) {\n  return str.substring(str.length - num).padLeft(str.length, mask);\n}",
+          "example": "mask('1234567890'); // '******7890'\nmask('1234567890', num: 3); // '*******890'\nmask('1234567890', num: 4, mask: '\\$'); // '$$$$$$7890'"
+        },
+        "tags": [
+          "string",
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "418b1bda199c29d25b32146493e236c1ec9a104dac15b843c289791f3012fd20",
+        "firstSeen": "1579690257",
+        "lastUpdated": "1579690257",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "max",
       "title": "max",
       "type": "snippet",

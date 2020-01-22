@@ -143,6 +143,22 @@
       }
     },
     {
+      "id": "mask",
+      "type": "snippetListing",
+      "title": "mask",
+      "attributes": {
+        "text": "Replaces all but the last `num` runes of a string with the specified `mask`.\n\nUse `String.substring()` to grab the last `num` runes, `String.padLeft()` to fill the beginning of the string with the `mask` up to the original length.\nOmit the optional parameter, `num`, to keep a default of `4` runes unmasked.\nOmit the optional parameter, `mask`, to use the default of `'*'`.\n\n",
+        "tags": [
+          "string",
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "418b1bda199c29d25b32146493e236c1ec9a104dac15b843c289791f3012fd20"
+      }
+    },
+    {
       "id": "max",
       "type": "snippetListing",
       "title": "max",
