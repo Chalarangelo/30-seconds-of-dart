@@ -403,6 +403,31 @@
       }
     },
     {
+      "id": "removeNonASCII",
+      "title": "removeNonASCII",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "removeNonASCII.md",
+        "text": "Removes non-printable ASCII characters.\n\nUse `String.replaceAll()` with a regular expression to remove non-printable ASCII characters.\n\n",
+        "codeBlocks": {
+          "code": "String removeNonASCII(String str) {\n  return str.replaceAll(new RegExp(r'[^\\x20-\\x7E]'), '');\n}",
+          "example": "removeNonASCII('äÄçÇéÉêlorem-ipsumöÖÐþúÚ'); // 'lorem-ipsum'"
+        },
+        "tags": [
+          "string",
+          "regexp",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "ce78d1bc523747803931cc6b7869ec1c2e12c57edb61e46a8b79a2bd7c29f83d",
+        "firstSeen": "1579690839",
+        "lastUpdated": "1579690839",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "reverseString",
       "title": "reverseString",
       "type": "snippet",
