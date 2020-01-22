@@ -111,6 +111,21 @@
       }
     },
     {
+      "id": "isLowerCase",
+      "type": "snippetListing",
+      "title": "isLowerCase",
+      "attributes": {
+        "text": "Checks if a string is lower case.\n\nConvert the given string to lower case, using `String.toLowerCase()` and compare it to the original.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e5f1b2a57cb1606e3bf8065174f6b286c8ac9b0c4125ebb7375e543682d685f5"
+      }
+    },
+    {
       "id": "isOdd",
       "type": "snippetListing",
       "title": "isOdd",
@@ -138,6 +153,21 @@
       },
       "meta": {
         "hash": "357be655419520a56ad13b32f4229d790e68b97006583f97fcb48a9da435baef"
+      }
+    },
+    {
+      "id": "isUpperCase",
+      "type": "snippetListing",
+      "title": "isUpperCase",
+      "attributes": {
+        "text": "Checks if a string is upper case.\n\nConvert the given string to upper case, using `String.toUpperCase()` and compare it to the original.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "856c4cdd2a615a427bc09e5116c560533befc5f01a1e5ee483e9318b98287f9b"
       }
     },
     {
@@ -238,6 +268,21 @@
       },
       "meta": {
         "hash": "356f65b435705adfab5c5649ca659ba1af075a7cec6b9694f5f73312749d4b04"
+      }
+    },
+    {
+      "id": "pad",
+      "type": "snippetListing",
+      "title": "pad",
+      "attributes": {
+        "text": "Pads a string on both sides with the specified `padding`, if it's shorter than the specified `length`.\n\nUse `String.padLeft()` and `String.padRight()` to pad both sides of the given string. \nOmit the optional parameter, `padding`, to use the whitespace as the default padding.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "35b0173d85a332c04a9b89ce067d69b2b86e969b6c9d35598e3939acb5b991cb"
       }
     },
     {
@@ -415,6 +460,21 @@
       },
       "meta": {
         "hash": "f55dff187108db931e8e627a72f373f07bae9d28f0619e72e6ba9047f6194171"
+      }
+    },
+    {
+      "id": "truncateString",
+      "type": "snippetListing",
+      "title": "truncateString",
+      "attributes": {
+        "text": "Truncates a string up to a specified length.\n\nDetermine if the string's `length` is greater than `num`. \nReturn the string truncated to the desired length, with `'...'` appended to the end or the original string.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "12f8fd6f79899f2f9a894a9903a5f355ae4f360285a9474936e446301fee574c"
       }
     },
     {
