@@ -476,6 +476,21 @@
       }
     },
     {
+      "id": "slice",
+      "type": "snippetListing",
+      "title": "slice",
+      "attributes": {
+        "text": "Returns a new list containing the elements between `start` and `end`.\nNegative values can be used, indicating an offset from the end of the list.\n\nUse `num.isNegative` to check if either `start` or `end` are negative and normalize their values.\nUse `List.sublist()` with the normalized values to return the desired list.\nOmit the optional parameter, `end`, to use the length of the list as the default.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "3b1ae3d2faedb8317fcbca853e17ab0482c08c5f8fef79c44ae2a6a5da19da94"
+      }
+    },
+    {
       "id": "splitLines",
       "type": "snippetListing",
       "title": "splitLines",

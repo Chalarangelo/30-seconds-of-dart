@@ -746,6 +746,30 @@
       }
     },
     {
+      "id": "slice",
+      "title": "slice",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "slice.md",
+        "text": "Returns a new list containing the elements between `start` and `end`.\nNegative values can be used, indicating an offset from the end of the list.\n\nUse `num.isNegative` to check if either `start` or `end` are negative and normalize their values.\nUse `List.sublist()` with the normalized values to return the desired list.\nOmit the optional parameter, `end`, to use the length of the list as the default.\n\n",
+        "codeBlocks": {
+          "code": "List<T> slice<T>(List<T> lst, int start, [int end]) {\n  int _start = start.isNegative ? lst.length + start : start;\n  int _end = end != null ? end.isNegative ? lst.length + end : end : lst.length;\n  return lst.sublist(_start, _end);\n}",
+          "example": "List<int> n = [1, 2, 3, 4, 5, 6, 7, 8];\n\nslice(n, 5);      // [6, 7, 8]\nslice(n, 1, 3);   // [2, 3]\nslice(n, 2, -2);  // [3, 4, 5, 6]\nslice(n, -4);     // [5, 6, 7, 8]\nslice(n, -6, -2); // [3, 4, 5, 6]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "3b1ae3d2faedb8317fcbca853e17ab0482c08c5f8fef79c44ae2a6a5da19da94",
+        "firstSeen": "1579768143",
+        "lastUpdated": "1579768143",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "splitLines",
       "title": "splitLines",
       "type": "snippet",
