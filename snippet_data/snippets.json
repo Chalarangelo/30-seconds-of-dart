@@ -125,6 +125,30 @@
       }
     },
     {
+      "id": "degreesToRads",
+      "title": "degreesToRads",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "degreesToRads.md",
+        "text": "Converts an angle from degrees to radians.\n\nUse `pi` and the degree to radian formula to convert the angle from degrees to radians.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math';\n\nnum degreesToRads(num deg) {\n  return (deg * pi) / 180.0;\n}",
+          "example": "degreesToRads(90.0); // ~1.5708"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "2aa2bec371cdd82af6f2cd7464d425d5b39e0c4179c9c1a582f68c733bd405e2",
+        "firstSeen": "1579766566",
+        "lastUpdated": "1579766566",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "digitize",
       "title": "digitize",
       "type": "snippet",
@@ -220,6 +244,30 @@
         "hash": "469cb8b909b21088952cb59b367c5900401f7a4437053f1ee69e0de918f55cde",
         "firstSeen": "1579683169",
         "lastUpdated": "1579683169",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "isDivisible",
+      "title": "isDivisible",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "isDivisible.md",
+        "text": "Checks if the first integer argument is divisible by the second one.\n\nUse the modulo operator (`%`) to check if the remainder is equal to `0`.\n\n",
+        "codeBlocks": {
+          "code": "bool isDivisible(int dividend, int divisor) {\n  return dividend % divisor == 0;\n}",
+          "example": "isDivisible(6, 3); // true"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "835100465726034631df6beff4a0bdbaa9fd185c89f68d48935bc57b6bdee1a1",
+        "firstSeen": "1579766320",
+        "lastUpdated": "1579766320",
         "updateCount": 2,
         "authorCount": 2
       }
@@ -340,6 +388,30 @@
         "hash": "856c4cdd2a615a427bc09e5116c560533befc5f01a1e5ee483e9318b98287f9b",
         "firstSeen": "1579703353",
         "lastUpdated": "1579703353",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "mapNumRange",
+      "title": "mapNumRange",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "mapNumRange.md",
+        "text": "Maps a number from one range to another range.\n\nReturns `n` mapped between `outMin`-`outMax` from `inMin`-`inMax`.\n\n",
+        "codeBlocks": {
+          "code": "num mapNumRange(num n, num inMin, num inMax, num outMin, num outMax) {\n  return ((n - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;\n}",
+          "example": "mapNumRange(5, 0, 10, 0, 100); // 50"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "6731cb2bf08f88c6c4a6b8ca853464319a7d23e979e9102d6e27bc1e5aea6c69",
+        "firstSeen": "1579765965",
+        "lastUpdated": "1579765965",
         "updateCount": 2,
         "authorCount": 2
       }
@@ -523,6 +595,30 @@
       }
     },
     {
+      "id": "radsToDegrees",
+      "title": "radsToDegrees",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "radsToDegrees.md",
+        "text": "Converts an angle from radians to degrees.\n\nUse `pi` and the radian to degree formula to convert the angle from radians to degrees.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math';\n\nnum radsToDegrees(num rad) {\n  return (rad * 180.0) / pi;\n}",
+          "example": "radsToDegrees(pi / 2); // 90"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "dd62b3c11efb81479e30d9d2f9e1271830be7f2a1ff485e9dccc917c6f306208",
+        "firstSeen": "1579766566",
+        "lastUpdated": "1579766566",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "randomDoubleInRange",
       "title": "randomDoubleInRange",
       "type": "snippet",
@@ -570,6 +666,32 @@
         "hash": "f34461c86bbcdbbc3f5d9eb2a0e36061f77c0312f1e845c5180d40390eb7f32b",
         "firstSeen": "1579630718",
         "lastUpdated": "1579630718",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "randomIntListInRange",
+      "title": "randomIntListInRange",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "randomIntListInRange.md",
+        "text": "Returns a a list of `n` random integers in the specified range.\n\nUse `List.generate()` to generate a new list with `n` terms, using a function that returns a random integer between `min` and `max`.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math';\n\nList<int> randomIntListInRange(n, {int min = 0, int max = 100}) {\n  return new List<int>.generate(\n      n, (_) => (new Random().nextDouble() * (max - min + 1) + min).floor());\n}",
+          "example": "randomIntListInRange(12, 35, 10); // [ 34, 14, 27, 17, 30, 27, 20, 26, 21, 14 ]"
+        },
+        "tags": [
+          "mat",
+          "utility",
+          "random",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "9f77abe792d89b0959788469a1fed3e0c8e8fc139f01b0a0a6e169960566f794",
+        "firstSeen": "1579765678",
+        "lastUpdated": "1579765678",
         "updateCount": 2,
         "authorCount": 2
       }

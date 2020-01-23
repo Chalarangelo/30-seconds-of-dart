@@ -80,6 +80,21 @@
       }
     },
     {
+      "id": "degreesToRads",
+      "type": "snippetListing",
+      "title": "degreesToRads",
+      "attributes": {
+        "text": "Converts an angle from degrees to radians.\n\nUse `pi` and the degree to radian formula to convert the angle from degrees to radians.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "2aa2bec371cdd82af6f2cd7464d425d5b39e0c4179c9c1a582f68c733bd405e2"
+      }
+    },
+    {
       "id": "digitize",
       "type": "snippetListing",
       "title": "digitize",
@@ -141,6 +156,21 @@
       },
       "meta": {
         "hash": "469cb8b909b21088952cb59b367c5900401f7a4437053f1ee69e0de918f55cde"
+      }
+    },
+    {
+      "id": "isDivisible",
+      "type": "snippetListing",
+      "title": "isDivisible",
+      "attributes": {
+        "text": "Checks if the first integer argument is divisible by the second one.\n\nUse the modulo operator (`%`) to check if the remainder is equal to `0`.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "835100465726034631df6beff4a0bdbaa9fd185c89f68d48935bc57b6bdee1a1"
       }
     },
     {
@@ -216,6 +246,21 @@
       },
       "meta": {
         "hash": "856c4cdd2a615a427bc09e5116c560533befc5f01a1e5ee483e9318b98287f9b"
+      }
+    },
+    {
+      "id": "mapNumRange",
+      "type": "snippetListing",
+      "title": "mapNumRange",
+      "attributes": {
+        "text": "Maps a number from one range to another range.\n\nReturns `n` mapped between `outMin`-`outMax` from `inMin`-`inMax`.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "6731cb2bf08f88c6c4a6b8ca853464319a7d23e979e9102d6e27bc1e5aea6c69"
       }
     },
     {
@@ -334,6 +379,21 @@
       }
     },
     {
+      "id": "radsToDegrees",
+      "type": "snippetListing",
+      "title": "radsToDegrees",
+      "attributes": {
+        "text": "Converts an angle from radians to degrees.\n\nUse `pi` and the radian to degree formula to convert the angle from radians to degrees.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "dd62b3c11efb81479e30d9d2f9e1271830be7f2a1ff485e9dccc917c6f306208"
+      }
+    },
+    {
       "id": "randomDoubleInRange",
       "type": "snippetListing",
       "title": "randomDoubleInRange",
@@ -365,6 +425,23 @@
       },
       "meta": {
         "hash": "f34461c86bbcdbbc3f5d9eb2a0e36061f77c0312f1e845c5180d40390eb7f32b"
+      }
+    },
+    {
+      "id": "randomIntListInRange",
+      "type": "snippetListing",
+      "title": "randomIntListInRange",
+      "attributes": {
+        "text": "Returns a a list of `n` random integers in the specified range.\n\nUse `List.generate()` to generate a new list with `n` terms, using a function that returns a random integer between `min` and `max`.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
+        "tags": [
+          "mat",
+          "utility",
+          "random",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "9f77abe792d89b0959788469a1fed3e0c8e8fc139f01b0a0a6e169960566f794"
       }
     },
     {
