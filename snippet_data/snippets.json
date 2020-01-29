@@ -229,7 +229,7 @@
       "type": "snippet",
       "attributes": {
         "fileName": "frequencies.md",
-        "text": "Returns a map with the unique values of a list as keys and their frequencies as the values.\n\nUse `Iterable.ToSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.\n\n",
+        "text": "Returns a map with the unique values of a list as keys and their frequencies as the values.\n\nUse `Iterable.toSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.\n\n",
         "codeBlocks": {
           "code": "Map<T, int> frequencies<T>(Iterable<T> itr) {\n  return new Map.fromIterable(itr.toSet(),\n      value: (i) => itr.where((v) => v == i).length);\n}",
           "example": "frequencies(['a', 'b', 'a', 'c', 'a', 'a', 'b']); // { a: 4, b: 2, c: 1 }"
@@ -240,10 +240,10 @@
         ]
       },
       "meta": {
-        "hash": "cd4161b07bdff3b9924d2d0d14d96818f582d385e5252a21976482371727c7c3",
+        "hash": "e675454e4ec51e2808447bb7a76f85224fcd3edae47a9b55c02c04e87ec0b171",
         "firstSeen": "1580308074",
-        "lastUpdated": "1580308074",
-        "updateCount": 2,
+        "lastUpdated": "1580308946",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -591,6 +591,30 @@
         "firstSeen": "1579628185",
         "lastUpdated": "1579631549",
         "updateCount": 4,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "mostFrequent",
+      "title": "mostFrequent",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "mostFrequent.md",
+        "text": "Returns the most frequent element in a list.\n\nUse `Iterable.toSet()` to get the unique values of the list, `Set.reduce()` to iterate over them and `Iterable.where()` to find the most frequent element.\n\n",
+        "codeBlocks": {
+          "code": "T mostFrequent<T>(Iterable<T> itr) {\n  return itr.toSet().reduce((i, j) =>\n    itr.where((v) => v == i).length > itr.where((v) => v == j).length ? i : j);\n}",
+          "example": "mostFrequent(['a', 'b', 'a', 'c', 'a', 'a', 'b']); // 'a'"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "df42d206a1165ed64b83def79698ff47ac547ccb20b8baa942e252b68d4b26c7",
+        "firstSeen": "1580308946",
+        "lastUpdated": "1580308946",
+        "updateCount": 2,
         "authorCount": 2
       }
     },
