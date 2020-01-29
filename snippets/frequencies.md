@@ -1,5 +1,5 @@
 ---
-title: frquencies
+title: frequencies
 tags: list,intermediate
 ---
 
