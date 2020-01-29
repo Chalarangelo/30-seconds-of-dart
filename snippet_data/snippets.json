@@ -224,11 +224,11 @@
       }
     },
     {
-      "id": "frquencies",
-      "title": "frquencies",
+      "id": "frequencies",
+      "title": "frequencies",
       "type": "snippet",
       "attributes": {
-        "fileName": "frquencies.md",
+        "fileName": "frequencies.md",
         "text": "Returns a map with the unique values of a list as keys and their frequencies as the values.\n\nUse `Iterable.ToSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.\n\n",
         "codeBlocks": {
           "code": "Map<T, int> frequencies<T>(Iterable<T> itr) {\n  return new Map.fromIterable(itr.toSet(),\n      value: (i) => itr.where((v) => v == i).length);\n}",
@@ -241,8 +241,8 @@
       },
       "meta": {
         "hash": "cd4161b07bdff3b9924d2d0d14d96818f582d385e5252a21976482371727c7c3",
-        "firstSeen": "1579778939",
-        "lastUpdated": "1579778939",
+        "firstSeen": "1580308074",
+        "lastUpdated": "1580308074",
         "updateCount": 2,
         "authorCount": 2
       }

@@ -143,9 +143,9 @@
       }
     },
     {
-      "id": "frquencies",
+      "id": "frequencies",
       "type": "snippetListing",
-      "title": "frquencies",
+      "title": "frequencies",
       "attributes": {
         "text": "Returns a map with the unique values of a list as keys and their frequencies as the values.\n\nUse `Iterable.ToSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.\n\n",
         "tags": [
