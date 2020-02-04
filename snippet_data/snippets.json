@@ -1189,6 +1189,30 @@
       }
     },
     {
+      "id": "unzip",
+      "title": "unzip",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "unzip.md",
+        "text": "Creates a list of lists, ungrouping the elements in a list produced by [zip](/dart/s/zip).\n\nUse `List.generate()` twice to generate a list of lists, using the appropriate indexes to get their values from the original list.\n\n",
+        "codeBlocks": {
+          "code": "List<List<T>> unzip<T>(List<List<T>> itr) {\n  return List.generate(\n      itr[0].length, (i) => List.generate(itr.length, (k) => itr[k][i]));\n}",
+          "example": "unzip([['a', 1, true], ['b', 2, false]]); // [['a', 'b'], [1, 2], [true, false]]\nunzip([['a', 1, true], ['b', 2]]); // [['a', 'b'], [1, 2], [true]]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "96c8be2ca8c45b2211aa5bec1b587f6bd2bf58c70614d7a31d4375aa5027e62e",
+        "firstSeen": "1580849305",
+        "lastUpdated": "1580849305",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "words",
       "title": "words",
       "type": "snippet",
@@ -1211,6 +1235,30 @@
         "lastUpdated": "1580840666",
         "updateCount": 3,
         "authorCount": 3
+      }
+    },
+    {
+      "id": "zip",
+      "title": "zip",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "zip.md",
+        "text": "Creates a list of elements, grouped based on the position in the original lists.\n\nUse `List.generate()` to generate a list, using `Iterable.map()`, `Iterable.reduce()` and `max()` to get the longest sublist.\nUse `List.generate()` inside the iterator to generate the sublists, using the appropriate indexes to get their values from the original list.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math';\n\nList<List<T>> zip<T>(List<List<T>> itr) {\n  return List.generate(\n      itr.map((x) => x.length).reduce(max),\n      (i) => List.generate(\n          itr.length, (k) => itr[k].length > i ? itr[k][i] : null));\n}",
+          "example": "zip([['a', 'b'], [1, 2], [true, false]]); // [['a', 1, true], ['b', 2, false]]\nzip([['a'], [1, 2], [true, false]]); // [['a', 1, true], [null, 2, false]]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "8681862488829c346f5a9df7b916023076bcf2385b65e0242bdae73429e95932",
+        "firstSeen": "1580849305",
+        "lastUpdated": "1580849305",
+        "updateCount": 2,
+        "authorCount": 2
       }
     }
   ],

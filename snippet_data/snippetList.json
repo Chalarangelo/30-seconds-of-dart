@@ -757,6 +757,21 @@
       }
     },
     {
+      "id": "unzip",
+      "type": "snippetListing",
+      "title": "unzip",
+      "attributes": {
+        "text": "Creates a list of lists, ungrouping the elements in a list produced by [zip](/dart/s/zip).\n\nUse `List.generate()` twice to generate a list of lists, using the appropriate indexes to get their values from the original list.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "96c8be2ca8c45b2211aa5bec1b587f6bd2bf58c70614d7a31d4375aa5027e62e"
+      }
+    },
+    {
       "id": "words",
       "type": "snippetListing",
       "title": "words",
@@ -770,6 +785,21 @@
       },
       "meta": {
         "hash": "c9105c2d0f47f2e521923fb05006049c72b18779f1eac2dbdd031aecb50e5c7b"
+      }
+    },
+    {
+      "id": "zip",
+      "type": "snippetListing",
+      "title": "zip",
+      "attributes": {
+        "text": "Creates a list of elements, grouped based on the position in the original lists.\n\nUse `List.generate()` to generate a list, using `Iterable.map()`, `Iterable.reduce()` and `max()` to get the longest sublist.\nUse `List.generate()` inside the iterator to generate the sublists, using the appropriate indexes to get their values from the original list.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "8681862488829c346f5a9df7b916023076bcf2385b65e0242bdae73429e95932"
       }
     }
   ],
