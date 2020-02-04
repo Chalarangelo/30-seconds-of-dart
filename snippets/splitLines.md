@@ -9,7 +9,7 @@ Use `String.split()` and a regular expression to match line breaks and create a 
 
 ```dart
 List<String> splitLines(String str) {
-  return str.split(new RegExp(r'\r?\n'));
+  return str.split(RegExp(r'\r?\n'));
 }
 ```
 

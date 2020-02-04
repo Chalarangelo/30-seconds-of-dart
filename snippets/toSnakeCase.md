@@ -12,10 +12,10 @@ Use `String.replaceAll()` to replace invalid separator characters (`-` and space
 String toSnakeCase(String str) {
   return str
       .replaceAllMapped(
-          new RegExp(
-              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),
+          RegExp(
+            r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),
           (Match m) => "${m[0].toLowerCase()}")
-      .replaceAll(new RegExp(r'(-|\s)+'), '_');
+      .replaceAll(RegExp(r'(-|\s)+'), '_');
 }
 ```
 

@@ -9,7 +9,7 @@ Use `String.replaceAll()` with a regular expression to replace all occurrences o
 
 ```dart
 String compactWhitespace(String str) {
-  return str.replaceAll(new RegExp(r'\s{2,}'), ' ');
+  return str.replaceAll(RegExp(r'\s{2,}'), ' ');
 }
 ```
 

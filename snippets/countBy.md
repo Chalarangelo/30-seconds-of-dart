@@ -10,7 +10,7 @@ Use `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a
 
 ```dart
 Map<Y, int> countBy<T, Y>(Iterable<T> itr, Y Function(T) fn) {
-  return new Map.fromIterable(itr.map(fn).toSet(),
+  return Map.fromIterable(itr.map(fn).toSet(),
       value: (i) => itr.where((v) => fn(v) == i).length);
 }
 ```

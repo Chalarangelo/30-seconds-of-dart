@@ -12,10 +12,10 @@ Use `String.replaceAll()` to replace invalid separator characters (`_` and space
 String toKebabCase(String str) {
   return str
       .replaceAllMapped(
-          new RegExp(
-              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),
+          RegExp(
+            r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),
           (Match m) => "${m[0].toLowerCase()}")
-      .replaceAll(new RegExp(r'(_|\s)+'), '-');
+      .replaceAll(RegExp(r'(_|\s)+'), '-');
 }
 ```
 

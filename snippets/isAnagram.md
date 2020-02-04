@@ -12,7 +12,7 @@ Use `String.split('')`, `Iterable.sort()`, in combination with the cascade opera
 bool isAnagram(String str1, String str2) {
   String normalize(String str) => (str
           .toLowerCase()
-          .replaceAll(new RegExp(r'[^a-z0-9]', caseSensitive: false), '')
+          .replaceAll(RegExp(r'[^a-z0-9]', caseSensitive: false), '')
           .split('')
             ..sort())
       .join('');

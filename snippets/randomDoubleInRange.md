@@ -13,7 +13,7 @@ Omit the optional parameter, `max`, to use a default maximum value of `1.0`.
 import 'dart:math';
 
 double randomDoubleInRange({double min = 0.0, double max = 1.0}) {
-  return new Random().nextDouble() * (max - min + 1) + min;
+  return Random().nextDouble() * (max - min + 1) + min;
 }
 ```
 

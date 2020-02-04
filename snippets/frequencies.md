@@ -10,7 +10,7 @@ Use `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a
 
 ```dart
 Map<T, int> frequencies<T>(Iterable<T> itr) {
-  return new Map.fromIterable(itr.toSet(),
+  return Map.fromIterable(itr.toSet(),
       value: (i) => itr.where((v) => v == i).length);
 }
 ```

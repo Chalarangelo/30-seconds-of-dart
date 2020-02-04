@@ -12,7 +12,7 @@ Omit the optional parameter, `pattern`, to use the default regular expression (n
 
 ```dart
 List<String> words(String str, {String pattern = '[^a-zA-Z-]+'}) {
-  return str.split(new RegExp(pattern)).where((s) => s.isNotEmpty).toList();
+  return str.split(RegExp(pattern)).where((s) => s.isNotEmpty).toList();
 }
 ```
 

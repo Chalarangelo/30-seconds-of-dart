@@ -9,7 +9,7 @@ Use `String.replaceAll()` with a regular expression to remove non-printable ASCI
 
 ```dart
 String removeNonASCII(String str) {
-  return str.replaceAll(new RegExp(r'[^\x20-\x7E]'), '');
+  return str.replaceAll(RegExp(r'[^\x20-\x7E]'), '');
 }
 ```
 

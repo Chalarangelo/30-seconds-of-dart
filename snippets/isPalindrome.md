@@ -10,7 +10,7 @@ Use `String.split('')`, `Iterable.reversed` and `Iterable.join('')` to reverse i
 
 ```dart
 bool isPalindrome(String str) {
-  String s = str.toLowerCase().replaceAll(new RegExp(r'[\W_]'), '');
+  String s = str.toLowerCase().replaceAll(RegExp(r'[\W_]'), '');
   return s == s.split('').reversed.join('');
 }
 ```
