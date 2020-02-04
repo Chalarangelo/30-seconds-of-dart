@@ -3,7 +3,7 @@ title: difference
 tags: list,math,beginner
 ---
 
-Returns the difference between two arrays.
+Returns the difference between two lists.
 
 Use `Iterable.toSet()` to get the unique values in `b`.
 Use `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in `a` not contained in `b`.
