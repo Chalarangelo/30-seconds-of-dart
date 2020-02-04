@@ -49,6 +49,21 @@
       }
     },
     {
+      "id": "chunk",
+      "type": "snippetListing",
+      "title": "chunk",
+      "attributes": {
+        "text": "Chunks a list into smaller lists of the specified size.\n\nUse `List.generate()` to generate a list that fits the number of chunks that will be produced.\nUse `List.sublist()` to map each element of the new list to a chunk the length of `size`. \nIf the original `list` can't be split evenly, the final chunk will contain the remaining elements.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "965965a68856a9e21622da19b9139082e4f22e055c2f612016804c6d0667161b"
+      }
+    },
+    {
       "id": "compactWhitespace",
       "type": "snippetListing",
       "title": "compactWhitespace",
@@ -61,7 +76,7 @@
         ]
       },
       "meta": {
-        "hash": "a107b15108358109198dd38a394f94bc95e3b9cb3fb7eed4dbe44e2679b6122c"
+        "hash": "aa464e8d34094581b2d9cdea74b9f553e8a94d447f159b0c3f79c26e216a0f8e"
       }
     },
     {
@@ -76,7 +91,7 @@
         ]
       },
       "meta": {
-        "hash": "c1baaab84777745bf55814e1c1ab708958ef3ffcfc094762f5fa55d98b434b0e"
+        "hash": "69c3ed9ad53213916e10ab6e133fb547647897bb9f15e399b10d3007e497b60c"
       }
     },
     {
@@ -114,7 +129,7 @@
       "type": "snippetListing",
       "title": "difference",
       "attributes": {
-        "text": "Returns the difference between two lists.\n\nUse `Iterable.toSet()` to get the unique values in `b`.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in `a` not contained in `b`.\n\n",
+        "text": "Returns the difference between two lists.\n\nUse `Iterable.toSet()` to get the unique values in `b`.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in `a` not contained in `b`, `Iterable.toList()` to return the appropriate result.\n\n",
         "tags": [
           "list",
           "math",
@@ -122,7 +137,7 @@
         ]
       },
       "meta": {
-        "hash": "64a11173be832c5d7558e9a705ac86f80c3c13d5002c934870da4c63c08ba0f0"
+        "hash": "a3c5b561c0b4bfa48b0733d6a2ababb225dd27aceba499df5180b712a25bd85c"
       }
     },
     {
@@ -130,7 +145,7 @@
       "type": "snippetListing",
       "title": "differenceBy",
       "attributes": {
-        "text": "Returns the difference between two lists, after applying the provided function to each list element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `b` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `a`,  `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in the resulting list not contained in the unique mapped values of `b`.\n\n",
+        "text": "Returns the difference between two lists, after applying the provided function to each list element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `b` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `a`,  `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in the resulting list not contained in the unique mapped values of `b`, `Iterable.toList()` to return the appropriate result.\n\n",
         "tags": [
           "list",
           "math",
@@ -138,7 +153,7 @@
         ]
       },
       "meta": {
-        "hash": "2a5bd136ee5504c2f8df852722d9f4e2c18548785a163d42b94f7183f9202da3"
+        "hash": "9dfcc0505fe97ba7a1bab2cddaef6943d6676c2439cfd05d805b59aace57f4d2"
       }
     },
     {
@@ -178,7 +193,7 @@
       "type": "snippetListing",
       "title": "fibonacci",
       "attributes": {
-        "text": "Generates a list, containing the Fibonacci sequence, up until the nth term.\n\nUse `List.generate()` to generate a new list with `n` terms, using a function that returns the sum of the last two values, except for the first two.\n\n",
+        "text": "Generates a list, containing the Fibonacci sequence, up until the nth term.\n\nUse `List.generate()` to generate a list with `n` terms, using a function that returns the sum of the last two values, except for the first two.\n\n",
         "tags": [
           "math",
           "list",
@@ -186,7 +201,7 @@
         ]
       },
       "meta": {
-        "hash": "83f28d90014d096802f67334981f487f34b733511daa6b6276b97d5138dc3041"
+        "hash": "dd26a21299d1ed9f3e821ebcedf9708b24b7217ed993fbc3662d43210dba7bc7"
       }
     },
     {
@@ -201,7 +216,7 @@
         ]
       },
       "meta": {
-        "hash": "e675454e4ec51e2808447bb7a76f85224fcd3edae47a9b55c02c04e87ec0b171"
+        "hash": "e83d3ebf963cfaffced8aa2cd5bcd1f4a3289e8acd732b52b87f5f18658bc02f"
       }
     },
     {
@@ -216,7 +231,7 @@
         ]
       },
       "meta": {
-        "hash": "1a6b3cdba0654798b877f883f0e7a3d9e17588e3dca56b6c5c2f6e78f4f3ef8b"
+        "hash": "15baadf7ded8bc4963c7f7ea1efccaede6f6274ce2d7883c44b8585880b61e94"
       }
     },
     {
@@ -232,7 +247,7 @@
         ]
       },
       "meta": {
-        "hash": "469cb8b909b21088952cb59b367c5900401f7a4437053f1ee69e0de918f55cde"
+        "hash": "3628065bf0010aacda59c2b9cab443193bbba4e097e6e6bef6f38443b00b0835"
       }
     },
     {
@@ -307,7 +322,7 @@
         ]
       },
       "meta": {
-        "hash": "357be655419520a56ad13b32f4229d790e68b97006583f97fcb48a9da435baef"
+        "hash": "ed2dc2b619b24f32a99ed4921f38ec813df3ce5eabd0cf8ab47ca8c44fa96486"
       }
     },
     {
@@ -345,7 +360,7 @@
       "type": "snippetListing",
       "title": "mapString",
       "attributes": {
-        "text": "Creates a new string with the results of calling the provided function on every character in the given string.\n\nUse `String.split('')` and `Iterable.map()` to call the provided function, `fn`, for each character in `str`. \nUse `Iterable.join('')` to recombine the list of runes into a string. \n\n",
+        "text": "Creates a string with the results of calling the provided function on every character in the given string.\n\nUse `String.split('')` and `Iterable.map()` to call the provided function, `fn`, for each character in `str`. \nUse `Iterable.join('')` to recombine the list of runes into a string. \n\n",
         "tags": [
           "string",
           "list",
@@ -355,7 +370,7 @@
         ]
       },
       "meta": {
-        "hash": "56213a234c309b03425f4235989efce5a9a31ec128d6b41bd06356f2b0b31a9e"
+        "hash": "da4d80156b8e73dadf912e5b2c3e10fa444b67443ede71b14f0643b5ceb380b5"
       }
     },
     {
@@ -492,14 +507,14 @@
       "attributes": {
         "text": "Returns a random double in the specified range.\n\nUse `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range.\nOmit the optional parameter, `min`, to use a default minimu value of `0.0`.\nOmit the optional parameter, `max`, to use a default maximum value of `1.0`.\n\n",
         "tags": [
-          "mat",
+          "math",
           "utility",
           "random",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "658bd9a4a71cec2ec00e23332bec06d037c1d4be9724e5c328216e74e148608c"
+        "hash": "3b77902ec76e9e9516fd91ca5a96108f9673cbe9b28d57a9ced19f037cd27d2d"
       }
     },
     {
@@ -509,14 +524,14 @@
       "attributes": {
         "text": "Returns a random integer in the specified range.\n\nUse `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range, using `num.floor()` to make it an integer.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
         "tags": [
-          "mat",
+          "math",
           "utility",
           "random",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "f34461c86bbcdbbc3f5d9eb2a0e36061f77c0312f1e845c5180d40390eb7f32b"
+        "hash": "46004bf004a6b4498b53987e57ca879932d8e81689578789b02970a6e45d91a0"
       }
     },
     {
@@ -524,16 +539,16 @@
       "type": "snippetListing",
       "title": "randomIntListInRange",
       "attributes": {
-        "text": "Returns a a list of `n` random integers in the specified range.\n\nUse `List.generate()` to generate a new list with `n` terms, using a function that returns a random integer between `min` and `max`.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
+        "text": "Returns a a list of `n` random integers in the specified range.\n\nUse `List.generate()` to generate a list with `n` terms, using a function that returns a random integer between `min` and `max`.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
         "tags": [
-          "mat",
+          "math",
           "utility",
           "random",
           "intermediate"
         ]
       },
       "meta": {
-        "hash": "9f77abe792d89b0959788469a1fed3e0c8e8fc139f01b0a0a6e169960566f794"
+        "hash": "fd93d8686d0ffc26ea720c423a1cc02a25356127a9f35c99dd6fc5921312054c"
       }
     },
     {
@@ -549,7 +564,7 @@
         ]
       },
       "meta": {
-        "hash": "ce78d1bc523747803931cc6b7869ec1c2e12c57edb61e46a8b79a2bd7c29f83d"
+        "hash": "adc6cc56427a870c02c3afb895eac78c733c0fe9769b075ea1d12971c6de25f0"
       }
     },
     {
@@ -594,7 +609,7 @@
         ]
       },
       "meta": {
-        "hash": "d69d493ab0ce88e04d6df5eccb4a66c14996a6070995c712a555c29a4856b4da"
+        "hash": "d3e127adec9e62636e2ea07fe6b9c05590b2a8bfe4069ba2b859ca8853d7e617"
       }
     },
     {
@@ -675,7 +690,7 @@
         ]
       },
       "meta": {
-        "hash": "5dfc8907f30daf76bce852b01d71625aecebc2cc53165800c0a81fec4c67643e"
+        "hash": "d0248206b0c3dbda2c71aa54daf0d2659539672f6f3e397a7b0e726e0ddc382e"
       }
     },
     {
@@ -691,7 +706,7 @@
         ]
       },
       "meta": {
-        "hash": "cb97be345b36154d9a44989065525396279ef9efd0a5ac0cddfd641d0cc5c8e8"
+        "hash": "cd8a2ba937ea9a61a0738805b646534c4ad36d8d2dc9cbf426e1b7ea80043227"
       }
     },
     {
@@ -707,7 +722,7 @@
         ]
       },
       "meta": {
-        "hash": "5db61f65f5d435c0985f1a9f465087b55cd1e6a1d0c1e7b7c77e6e74354771bc"
+        "hash": "b30baebfacc3921da346d42c1a29bcd694d2de66d6d5f52c33debfb71fc208e9"
       }
     },
     {
@@ -723,7 +738,7 @@
         ]
       },
       "meta": {
-        "hash": "f55dff187108db931e8e627a72f373f07bae9d28f0619e72e6ba9047f6194171"
+        "hash": "185618ff621d81d014cb4c7d7d669efcd98c49c81491170cbff1b9a888fa9313"
       }
     },
     {
@@ -754,7 +769,7 @@
         ]
       },
       "meta": {
-        "hash": "cf330144c90b90e201d24c6f34cfd91217755c64015080d747047398a6e43ceb"
+        "hash": "c9105c2d0f47f2e521923fb05006049c72b18779f1eac2dbdd031aecb50e5c7b"
       }
     }
   ],

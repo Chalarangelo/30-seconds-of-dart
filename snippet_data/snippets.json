@@ -76,6 +76,30 @@
       }
     },
     {
+      "id": "chunk",
+      "title": "chunk",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "chunk.md",
+        "text": "Chunks a list into smaller lists of the specified size.\n\nUse `List.generate()` to generate a list that fits the number of chunks that will be produced.\nUse `List.sublist()` to map each element of the new list to a chunk the length of `size`. \nIf the original `list` can't be split evenly, the final chunk will contain the remaining elements.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math';\n\nList<List<T>> chunk<T>(List<T> lst, int size) {\n  return List.generate((lst.length / size).ceil(),\n      (i) => lst.sublist(i * size, min(i * size + size, lst.length)));\n}",
+          "example": "chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "965965a68856a9e21622da19b9139082e4f22e055c2f612016804c6d0667161b",
+        "firstSeen": "1580842479",
+        "lastUpdated": "1580842479",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "compactWhitespace",
       "title": "compactWhitespace",
       "type": "snippet",
@@ -83,7 +107,7 @@
         "fileName": "compactWhitespace.md",
         "text": "Returns a string with whitespaces compacted.\n\nUse `String.replaceAll()` with a regular expression to replace all occurrences of 2 or more whitespace characters with a single space.\n\n",
         "codeBlocks": {
-          "code": "String compactWhitespace(String str) {\n  return str.replaceAll(new RegExp(r'\\s{2,}'), ' ');\n}",
+          "code": "String compactWhitespace(String str) {\n  return str.replaceAll(RegExp(r'\\s{2,}'), ' ');\n}",
           "example": "compactWhitespace('Lorem    Ipsum'); // 'Lorem Ipsum'\ncompactWhitespace('Lorem \\n Ipsum'); // 'Lorem Ipsum'"
         },
         "tags": [
@@ -93,11 +117,11 @@
         ]
       },
       "meta": {
-        "hash": "a107b15108358109198dd38a394f94bc95e3b9cb3fb7eed4dbe44e2679b6122c",
+        "hash": "aa464e8d34094581b2d9cdea74b9f553e8a94d447f159b0c3f79c26e216a0f8e",
         "firstSeen": "1579691307",
-        "lastUpdated": "1579691307",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -108,7 +132,7 @@
         "fileName": "countBy.md",
         "text": "Groups the elements of a list based on the given function and returns the count of elements in each group.\n\nUse `Iterable.map()` to map each element to the value returned by `fn`, `Iterable.toSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.\n\n",
         "codeBlocks": {
-          "code": "Map<Y, int> countBy<T, Y>(Iterable<T> itr, Y Function(T) fn) {\n  return new Map.fromIterable(itr.map(fn).toSet(),\n      value: (i) => itr.where((v) => fn(v) == i).length);\n}",
+          "code": "Map<Y, int> countBy<T, Y>(Iterable<T> itr, Y Function(T) fn) {\n  return Map.fromIterable(itr.map(fn).toSet(),\n      value: (i) => itr.where((v) => fn(v) == i).length);\n}",
           "example": "countBy(['one', 'two', 'three'], (v) => v.length); // [{3: 2, 5: 1}]"
         },
         "tags": [
@@ -117,11 +141,11 @@
         ]
       },
       "meta": {
-        "hash": "c1baaab84777745bf55814e1c1ab708958ef3ffcfc094762f5fa55d98b434b0e",
+        "hash": "69c3ed9ad53213916e10ab6e133fb547647897bb9f15e399b10d3007e497b60c",
         "firstSeen": "1580801859",
-        "lastUpdated": "1580804643",
-        "updateCount": 3,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 4,
+        "authorCount": 3
       }
     },
     {
@@ -178,10 +202,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "difference.md",
-        "text": "Returns the difference between two lists.\n\nUse `Iterable.toSet()` to get the unique values in `b`.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in `a` not contained in `b`.\n\n",
+        "text": "Returns the difference between two lists.\n\nUse `Iterable.toSet()` to get the unique values in `b`.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in `a` not contained in `b`, `Iterable.toList()` to return the appropriate result.\n\n",
         "codeBlocks": {
-          "code": "Iterable<T> difference<T>(Iterable<T> a, Iterable<T> b) {\n  final s = b.toSet();\n  return a.where((x) => !s.contains(x));\n}",
-          "example": "difference([1, 2, 3], [1, 2, 4]); // (3)"
+          "code": "List<T> difference<T>(Iterable<T> a, Iterable<T> b) {\n  final s = b.toSet();\n  return a.where((x) => !s.contains(x)).toList();\n}",
+          "example": "difference([1, 2, 3], [1, 2, 4]); // [3]"
         },
         "tags": [
           "list",
@@ -190,11 +214,11 @@
         ]
       },
       "meta": {
-        "hash": "64a11173be832c5d7558e9a705ac86f80c3c13d5002c934870da4c63c08ba0f0",
+        "hash": "a3c5b561c0b4bfa48b0733d6a2ababb225dd27aceba499df5180b712a25bd85c",
         "firstSeen": "1580802251",
-        "lastUpdated": "1580802696",
-        "updateCount": 3,
-        "authorCount": 2
+        "lastUpdated": "1580840482",
+        "updateCount": 4,
+        "authorCount": 3
       }
     },
     {
@@ -203,10 +227,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "differenceBy.md",
-        "text": "Returns the difference between two lists, after applying the provided function to each list element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `b` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `a`,  `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in the resulting list not contained in the unique mapped values of `b`.\n\n",
+        "text": "Returns the difference between two lists, after applying the provided function to each list element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `b` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `a`,  `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in the resulting list not contained in the unique mapped values of `b`, `Iterable.toList()` to return the appropriate result.\n\n",
         "codeBlocks": {
-          "code": "Iterable<Y> differenceBy<T,Y>(Iterable<T> a, Iterable<T> b, Y Function(T) fn) {\n  final s = b.map(fn).toSet();\n  return a.map((x) => fn(x)).where((x) => !s.contains(x));\n}",
-          "example": "differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], (v) => v['x']); // (2)"
+          "code": "List<Y> differenceBy<T,Y>(Iterable<T> a, Iterable<T> b, Y Function(T) fn) {\n  final s = b.map(fn).toSet();\n  return a.map((x) => fn(x)).where((x) => !s.contains(x)).toList();\n}",
+          "example": "differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], (v) => v['x']); // [2]"
         },
         "tags": [
           "list",
@@ -215,11 +239,11 @@
         ]
       },
       "meta": {
-        "hash": "2a5bd136ee5504c2f8df852722d9f4e2c18548785a163d42b94f7183f9202da3",
+        "hash": "9dfcc0505fe97ba7a1bab2cddaef6943d6676c2439cfd05d805b59aace57f4d2",
         "firstSeen": "1580803194",
-        "lastUpdated": "1580803781",
-        "updateCount": 3,
-        "authorCount": 2
+        "lastUpdated": "1580840482",
+        "updateCount": 4,
+        "authorCount": 3
       }
     },
     {
@@ -278,9 +302,9 @@
       "type": "snippet",
       "attributes": {
         "fileName": "fibonacci.md",
-        "text": "Generates a list, containing the Fibonacci sequence, up until the nth term.\n\nUse `List.generate()` to generate a new list with `n` terms, using a function that returns the sum of the last two values, except for the first two.\n\n",
+        "text": "Generates a list, containing the Fibonacci sequence, up until the nth term.\n\nUse `List.generate()` to generate a list with `n` terms, using a function that returns the sum of the last two values, except for the first two.\n\n",
         "codeBlocks": {
-          "code": "List<int> fibonacci(int n) {\n  int last = 1;\n  int last2 = 0;\n  return new List<int>.generate(n, (int i) {\n    if (i < 2) return i;\n    int curr = last + last2;\n    last2 = last;\n    last = curr;\n    return curr;\n  });\n}",
+          "code": "List<int> fibonacci(int n) {\n  int last = 1;\n  int last2 = 0;\n  return List<int>.generate(n, (int i) {\n    if (i < 2) return i;\n    int curr = last + last2;\n    last2 = last;\n    last = curr;\n    return curr;\n  });\n}",
           "example": "fibonacci(6); // [0, 1, 1, 2, 3, 5]"
         },
         "tags": [
@@ -290,11 +314,11 @@
         ]
       },
       "meta": {
-        "hash": "83f28d90014d096802f67334981f487f34b733511daa6b6276b97d5138dc3041",
+        "hash": "dd26a21299d1ed9f3e821ebcedf9708b24b7217ed993fbc3662d43210dba7bc7",
         "firstSeen": "1579705610",
-        "lastUpdated": "1579705610",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -305,7 +329,7 @@
         "fileName": "frequencies.md",
         "text": "Returns a map with the unique values of a list as keys and their frequencies as the values.\n\nUse `Iterable.toSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.\n\n",
         "codeBlocks": {
-          "code": "Map<T, int> frequencies<T>(Iterable<T> itr) {\n  return new Map.fromIterable(itr.toSet(),\n      value: (i) => itr.where((v) => v == i).length);\n}",
+          "code": "Map<T, int> frequencies<T>(Iterable<T> itr) {\n  return Map.fromIterable(itr.toSet(),\n      value: (i) => itr.where((v) => v == i).length);\n}",
           "example": "frequencies(['a', 'b', 'a', 'c', 'a', 'a', 'b']); // { a: 4, b: 2, c: 1 }"
         },
         "tags": [
@@ -314,11 +338,11 @@
         ]
       },
       "meta": {
-        "hash": "e675454e4ec51e2808447bb7a76f85224fcd3edae47a9b55c02c04e87ec0b171",
+        "hash": "e83d3ebf963cfaffced8aa2cd5bcd1f4a3289e8acd732b52b87f5f18658bc02f",
         "firstSeen": "1580308074",
-        "lastUpdated": "1580308946",
-        "updateCount": 3,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 4,
+        "authorCount": 3
       }
     },
     {
@@ -329,7 +353,7 @@
         "fileName": "groupBy.md",
         "text": "Groups the elements of a list based on the given function.\n\nUse `Iterable.map()` to map each element to the value returned by `fn`, `Iterable.toSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.toList()` to generate a map with the unique values as keys and the list elements as values.\n\n",
         "codeBlocks": {
-          "code": "Map<Y, List<T>> groupBy<T, Y>(Iterable<T> itr, Y Function(T) fn) {\n  return new Map.fromIterable(itr.map(fn).toSet(),\n      value: (i) => itr.where((v) => fn(v) == i).toList());\n}",
+          "code": "Map<Y, List<T>> groupBy<T, Y>(Iterable<T> itr, Y Function(T) fn) {\n  return Map.fromIterable(itr.map(fn).toSet(),\n      value: (i) => itr.where((v) => fn(v) == i).toList());\n}",
           "example": "groupBy(['one', 'two', 'three'], (v) => v.length); // {3: ['one', 'two'], 5: ['three']}"
         },
         "tags": [
@@ -338,11 +362,11 @@
         ]
       },
       "meta": {
-        "hash": "1a6b3cdba0654798b877f883f0e7a3d9e17588e3dca56b6c5c2f6e78f4f3ef8b",
+        "hash": "15baadf7ded8bc4963c7f7ea1efccaede6f6274ce2d7883c44b8585880b61e94",
         "firstSeen": "1580804643",
-        "lastUpdated": "1580804643",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -353,7 +377,7 @@
         "fileName": "isAnagram.md",
         "text": "Checks if a string is an anagram of another string (case-insensitive, ignores spaces, punctuation and special characters).\n\nUse `String.toLowerCase()` and `String.prototype.replaceAll()` with an appropriate regular expression to remove unnecessary characters and convert the string to lowercase.\nUse `String.split('')`, `Iterable.sort()`, in combination with the cascade operator (`..`) and `Iterable.join('')` to normalize both strings and check if their normalized forms are equal.\n\n",
         "codeBlocks": {
-          "code": "bool isAnagram(String str1, String str2) {\n  String normalize(String str) => (str\n          .toLowerCase()\n          .replaceAll(new RegExp(r'[^a-z0-9]', caseSensitive: false), '')\n          .split('')\n            ..sort())\n      .join('');\n  return normalize(str1) == normalize(str2);\n}",
+          "code": "bool isAnagram(String str1, String str2) {\n  String normalize(String str) => (str\n          .toLowerCase()\n          .replaceAll(RegExp(r'[^a-z0-9]', caseSensitive: false), '')\n          .split('')\n            ..sort())\n      .join('');\n  return normalize(str1) == normalize(str2);\n}",
           "example": "isAnagram('iceman', 'cinema'); // true"
         },
         "tags": [
@@ -363,11 +387,11 @@
         ]
       },
       "meta": {
-        "hash": "469cb8b909b21088952cb59b367c5900401f7a4437053f1ee69e0de918f55cde",
+        "hash": "3628065bf0010aacda59c2b9cab443193bbba4e097e6e6bef6f38443b00b0835",
         "firstSeen": "1579683169",
-        "lastUpdated": "1579683169",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -474,7 +498,7 @@
         "fileName": "isPalindrome.md",
         "text": "Returns `true` if the given string is a palindrome, `false` otherwise.\n\nUse `String.toLowerCase()` to convert the given string to lowercase, `String.replaceAll()` to remove non-alphanumeric characters.\nUse `String.split('')`, `Iterable.reversed` and `Iterable.join('')` to reverse it and compare it to the unreversed string.\n\n",
         "codeBlocks": {
-          "code": "bool isPalindrome(String str) {\n  String s = str.toLowerCase().replaceAll(new RegExp(r'[\\W_]'), '');\n  return s == s.split('').reversed.join('');\n}",
+          "code": "bool isPalindrome(String str) {\n  String s = str.toLowerCase().replaceAll(RegExp(r'[\\W_]'), '');\n  return s == s.split('').reversed.join('');\n}",
           "example": "isPalindrome('taco cat'); // true"
         },
         "tags": [
@@ -483,11 +507,11 @@
         ]
       },
       "meta": {
-        "hash": "357be655419520a56ad13b32f4229d790e68b97006583f97fcb48a9da435baef",
+        "hash": "ed2dc2b619b24f32a99ed4921f38ec813df3ce5eabd0cf8ab47ca8c44fa96486",
         "firstSeen": "1579679384",
-        "lastUpdated": "1579679384",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -544,7 +568,7 @@
       "type": "snippet",
       "attributes": {
         "fileName": "mapString.md",
-        "text": "Creates a new string with the results of calling the provided function on every character in the given string.\n\nUse `String.split('')` and `Iterable.map()` to call the provided function, `fn`, for each character in `str`. \nUse `Iterable.join('')` to recombine the list of runes into a string. \n\n",
+        "text": "Creates a string with the results of calling the provided function on every character in the given string.\n\nUse `String.split('')` and `Iterable.map()` to call the provided function, `fn`, for each character in `str`. \nUse `Iterable.join('')` to recombine the list of runes into a string. \n\n",
         "codeBlocks": {
           "code": "String mapString(String str, String Function(String c) fn) {\n  return str.split('').map(fn).join('');\n}",
           "example": "mapString('lorem ipsum', (c) => c.toUpperCase()); // 'LOREM IPSUM'"
@@ -558,10 +582,10 @@
         ]
       },
       "meta": {
-        "hash": "56213a234c309b03425f4235989efce5a9a31ec128d6b41bd06356f2b0b31a9e",
+        "hash": "da4d80156b8e73dadf912e5b2c3e10fa444b67443ede71b14f0643b5ceb380b5",
         "firstSeen": "1579631640",
-        "lastUpdated": "1579631640",
-        "updateCount": 2,
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -772,21 +796,21 @@
         "fileName": "randomDoubleInRange.md",
         "text": "Returns a random double in the specified range.\n\nUse `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range.\nOmit the optional parameter, `min`, to use a default minimu value of `0.0`.\nOmit the optional parameter, `max`, to use a default maximum value of `1.0`.\n\n",
         "codeBlocks": {
-          "code": "import 'dart:math';\n\ndouble randomDoubleInRange({double min = 0.0, double max = 1.0}) {\n  return new Random().nextDouble() * (max - min + 1) + min;\n}",
+          "code": "import 'dart:math';\n\ndouble randomDoubleInRange({double min = 0.0, double max = 1.0}) {\n  return Random().nextDouble() * (max - min + 1) + min;\n}",
           "example": "randomDoubleInRange(); // 0.719213632334785\nrandomDoubleInRange(min: 2.4, max: 9.8); // 6.21315328537085"
         },
         "tags": [
-          "mat",
+          "math",
           "utility",
           "random",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "658bd9a4a71cec2ec00e23332bec06d037c1d4be9724e5c328216e74e148608c",
+        "hash": "3b77902ec76e9e9516fd91ca5a96108f9673cbe9b28d57a9ced19f037cd27d2d",
         "firstSeen": "1579630718",
-        "lastUpdated": "1579630718",
-        "updateCount": 2,
+        "lastUpdated": "1580840666",
+        "updateCount": 4,
         "authorCount": 2
       }
     },
@@ -798,21 +822,21 @@
         "fileName": "randomIntInRange.md",
         "text": "Returns a random integer in the specified range.\n\nUse `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range, using `num.floor()` to make it an integer.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
         "codeBlocks": {
-          "code": "import 'dart:math';\n\nint randomIntInRange({int min = 0, int max = 100}) {\n  return (new Random().nextDouble() * (max - min + 1) + min).floor();\n}",
+          "code": "import 'dart:math';\n\nint randomIntInRange({int min = 0, int max = 100}) {\n  return (Random().nextDouble() * (max - min + 1) + min).floor();\n}",
           "example": "randomIntInRange(); // 90\nrandomIntInRange(min: 10, max: 30); // 23"
         },
         "tags": [
-          "mat",
+          "math",
           "utility",
           "random",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "f34461c86bbcdbbc3f5d9eb2a0e36061f77c0312f1e845c5180d40390eb7f32b",
+        "hash": "46004bf004a6b4498b53987e57ca879932d8e81689578789b02970a6e45d91a0",
         "firstSeen": "1579630718",
-        "lastUpdated": "1579630718",
-        "updateCount": 2,
+        "lastUpdated": "1580840666",
+        "updateCount": 4,
         "authorCount": 2
       }
     },
@@ -822,24 +846,24 @@
       "type": "snippet",
       "attributes": {
         "fileName": "randomIntListInRange.md",
-        "text": "Returns a a list of `n` random integers in the specified range.\n\nUse `List.generate()` to generate a new list with `n` terms, using a function that returns a random integer between `min` and `max`.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
+        "text": "Returns a a list of `n` random integers in the specified range.\n\nUse `List.generate()` to generate a list with `n` terms, using a function that returns a random integer between `min` and `max`.\nOmit the optional parameter, `min`, to use a default minimu value of `0`.\nOmit the optional parameter, `max`, to use a default maximum value of `100`.\n\n",
         "codeBlocks": {
-          "code": "import 'dart:math';\n\nList<int> randomIntListInRange(n, {int min = 0, int max = 100}) {\n  return new List<int>.generate(\n      n, (_) => (new Random().nextDouble() * (max - min + 1) + min).floor());\n}",
+          "code": "import 'dart:math';\n\nList<int> randomIntListInRange(n, {int min = 0, int max = 100}) {\n  return List<int>.generate(\n      n, (_) => (Random().nextDouble() * (max - min + 1) + min).floor());\n}",
           "example": "randomIntListInRange(12, 35, 10); // [ 34, 14, 27, 17, 30, 27, 20, 26, 21, 14 ]"
         },
         "tags": [
-          "mat",
+          "math",
           "utility",
           "random",
           "intermediate"
         ]
       },
       "meta": {
-        "hash": "9f77abe792d89b0959788469a1fed3e0c8e8fc139f01b0a0a6e169960566f794",
+        "hash": "fd93d8686d0ffc26ea720c423a1cc02a25356127a9f35c99dd6fc5921312054c",
         "firstSeen": "1579765678",
-        "lastUpdated": "1579765678",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 4,
+        "authorCount": 3
       }
     },
     {
@@ -850,7 +874,7 @@
         "fileName": "removeNonASCII.md",
         "text": "Removes non-printable ASCII characters.\n\nUse `String.replaceAll()` with a regular expression to remove non-printable ASCII characters.\n\n",
         "codeBlocks": {
-          "code": "String removeNonASCII(String str) {\n  return str.replaceAll(new RegExp(r'[^\\x20-\\x7E]'), '');\n}",
+          "code": "String removeNonASCII(String str) {\n  return str.replaceAll(RegExp(r'[^\\x20-\\x7E]'), '');\n}",
           "example": "removeNonASCII('äÄçÇéÉêlorem-ipsumöÖÐþúÚ'); // 'lorem-ipsum'"
         },
         "tags": [
@@ -860,11 +884,11 @@
         ]
       },
       "meta": {
-        "hash": "ce78d1bc523747803931cc6b7869ec1c2e12c57edb61e46a8b79a2bd7c29f83d",
+        "hash": "adc6cc56427a870c02c3afb895eac78c733c0fe9769b075ea1d12971c6de25f0",
         "firstSeen": "1579690839",
-        "lastUpdated": "1579690839",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -923,7 +947,7 @@
         "fileName": "splitLines.md",
         "text": "Splits a multiline string into a list of lines.\n\nUse `String.split()` and a regular expression to match line breaks and create a list.\n\n",
         "codeBlocks": {
-          "code": "List<String> splitLines(String str) {\n  return str.split(new RegExp(r'\\r?\\n'));\n}",
+          "code": "List<String> splitLines(String str) {\n  return str.split(RegExp(r'\\r?\\n'));\n}",
           "example": "splitLines('This\\nis a\\nmultiline\\nstring.\\n'); // ['This', 'is a', 'multiline', 'string.' , '']"
         },
         "tags": [
@@ -932,11 +956,11 @@
         ]
       },
       "meta": {
-        "hash": "d69d493ab0ce88e04d6df5eccb4a66c14996a6070995c712a555c29a4856b4da",
+        "hash": "d3e127adec9e62636e2ea07fe6b9c05590b2a8bfe4069ba2b859ca8853d7e617",
         "firstSeen": "1579691995",
-        "lastUpdated": "1579691995",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -1048,7 +1072,7 @@
         "fileName": "toCamelCase.md",
         "text": "Converts a string to camelcase.\n\nUse `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.\nUse `String.replaceAll()` to remove invalid separator characters (`_`, `-` and spaces).\nFinally, use `String.toLowerCase()` and to convert the first letter to lowercase.\n\n",
         "codeBlocks": {
-          "code": "String toCamelCase(String str) {\n  String s = str\n      .replaceAllMapped(\n          new RegExp(\n              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) =>\n              \"${m[0][0].toUpperCase()}${m[0].substring(1).toLowerCase()}\")\n      .replaceAll(new RegExp(r'(_|-|\\s)+'), '');\n  return s[0].toLowerCase() + s.substring(1);\n}",
+          "code": "String toCamelCase(String str) {\n  String s = str\n      .replaceAllMapped(\n          RegExp(\n            r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) =>\n            \"${m[0][0].toUpperCase()}${m[0].substring(1).toLowerCase()}\")\n      .replaceAll(RegExp(r'(_|-|\\s)+'), '');\n  return s[0].toLowerCase() + s.substring(1);\n}",
           "example": "toCamelCase('some_database_field_name'); // 'someDatabaseFieldName'\ntoCamelCase('Some label that needs to be camelized'); // 'someLabelThatNeedsToBeCamelized'\ntoCamelCase('some-javascript-property'); // 'someJavascriptProperty'\ntoCamelCase('some-mixed_string with spaces_underscores-and-hyphens'); // 'someMixedStringWithSpacesUnderscoresAndHyphens'"
         },
         "tags": [
@@ -1058,10 +1082,10 @@
         ]
       },
       "meta": {
-        "hash": "5dfc8907f30daf76bce852b01d71625aecebc2cc53165800c0a81fec4c67643e",
+        "hash": "d0248206b0c3dbda2c71aa54daf0d2659539672f6f3e397a7b0e726e0ddc382e",
         "firstSeen": "1579634104",
-        "lastUpdated": "1579634104",
-        "updateCount": 2,
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -1073,7 +1097,7 @@
         "fileName": "toKebabCase.md",
         "text": "Converts a string to kebab case.\n\nUse `String.replaceAllMapped()` to break the string into words and `String.toLowerCase()` to convert each one to lowercase, using a `RegExp`.\nUse `String.replaceAll()` to replace invalid separator characters (`_` and spaces). with hyphens\n\n",
         "codeBlocks": {
-          "code": "String toKebabCase(String str) {\n  return str\n      .replaceAllMapped(\n          new RegExp(\n              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) => \"${m[0].toLowerCase()}\")\n      .replaceAll(new RegExp(r'(_|\\s)+'), '-');\n}",
+          "code": "String toKebabCase(String str) {\n  return str\n      .replaceAllMapped(\n          RegExp(\n            r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) => \"${m[0].toLowerCase()}\")\n      .replaceAll(RegExp(r'(_|\\s)+'), '-');\n}",
           "example": "toKebabCase('camelCase'); // 'camel-case'\ntoKebabCase('some text'); // 'some-text'\ntoKebabCase('some-mixed_string With spaces_underscores-and-hyphens'); // 'some-mixed-string-with-spaces-underscores-and-hyphens'"
         },
         "tags": [
@@ -1083,10 +1107,10 @@
         ]
       },
       "meta": {
-        "hash": "cb97be345b36154d9a44989065525396279ef9efd0a5ac0cddfd641d0cc5c8e8",
+        "hash": "cd8a2ba937ea9a61a0738805b646534c4ad36d8d2dc9cbf426e1b7ea80043227",
         "firstSeen": "1579634104",
-        "lastUpdated": "1579634104",
-        "updateCount": 2,
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -1098,7 +1122,7 @@
         "fileName": "toSnakeCase.md",
         "text": "Converts a string to snake case.\n\nUse `String.replaceAllMapped()` to break the string into words and `String.toLowerCase()` to convert each one to lowercase, using a `RegExp`.\nUse `String.replaceAll()` to replace invalid separator characters (`-` and spaces) with underscores.\n\n",
         "codeBlocks": {
-          "code": "String toSnakeCase(String str) {\n  return str\n      .replaceAllMapped(\n          new RegExp(\n              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) => \"${m[0].toLowerCase()}\")\n      .replaceAll(new RegExp(r'(-|\\s)+'), '_');\n}",
+          "code": "String toSnakeCase(String str) {\n  return str\n      .replaceAllMapped(\n          RegExp(\n            r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) => \"${m[0].toLowerCase()}\")\n      .replaceAll(RegExp(r'(-|\\s)+'), '_');\n}",
           "example": "toSnakeCase('camelCase'); // 'camel_case'\ntoSnakeCase('some text'); // 'some_text'\ntoSnakeCase('some-mixed_string With spaces_underscores-and-hyphens'); // 'some_mixed_string_with_spaces_underscores_and_hyphens'"
         },
         "tags": [
@@ -1108,10 +1132,10 @@
         ]
       },
       "meta": {
-        "hash": "5db61f65f5d435c0985f1a9f465087b55cd1e6a1d0c1e7b7c77e6e74354771bc",
+        "hash": "b30baebfacc3921da346d42c1a29bcd694d2de66d6d5f52c33debfb71fc208e9",
         "firstSeen": "1579634104",
-        "lastUpdated": "1579634104",
-        "updateCount": 2,
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -1123,7 +1147,7 @@
         "fileName": "toTitleCase.md",
         "text": "Converts a string to title case.\n\nUse `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.\nUse `String.replaceAll()` to replace invalid separator characters (`-` and `_`) with spaces.\n\n",
         "codeBlocks": {
-          "code": "String toTitleCase(String str) {\n  return str\n      .replaceAllMapped(\n          new RegExp(\n              r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) =>\n              \"${m[0][0].toUpperCase()}${m[0].substring(1).toLowerCase()}\")\n      .replaceAll(new RegExp(r'(_|-)+'), ' ');\n}",
+          "code": "String toTitleCase(String str) {\n  return str\n      .replaceAllMapped(\n          RegExp(\n            r'[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+'),\n          (Match m) =>\n            \"${m[0][0].toUpperCase()}${m[0].substring(1).toLowerCase()}\")\n      .replaceAll(RegExp(r'(_|-)+'), ' ');\n}",
           "example": "toTitleCase('some_database_field_name'); // 'Some Database Field Name'\ntoTitleCase('Some label that needs to be title-cased'); // 'Some Label That Needs To Be Title Cased'\ntoTitleCase('some-package-name'); // 'Some Package Name'\ntoTitleCase('some-mixed_string with spaces_underscores-and-hyphens'); // 'Some Mixed String With Spaces Underscores And Hyphens'"
         },
         "tags": [
@@ -1133,10 +1157,10 @@
         ]
       },
       "meta": {
-        "hash": "f55dff187108db931e8e627a72f373f07bae9d28f0619e72e6ba9047f6194171",
+        "hash": "185618ff621d81d014cb4c7d7d669efcd98c49c81491170cbff1b9a888fa9313",
         "firstSeen": "1579634104",
-        "lastUpdated": "1579634104",
-        "updateCount": 2,
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -1172,7 +1196,7 @@
         "fileName": "words.md",
         "text": "Converts a given string into a list of words.\n\nUse `String.split()` with the supplied `pattern` to convert to a list of strings. \nUse `Iterable.where()` in combination with `String.isNotEmpty` to remove any empty strings. \nFinally, convert to a list using `Iterable.toList()`.\nOmit the optional parameter, `pattern`, to use the default regular expression (non-alphanumeric characters).\n\n",
         "codeBlocks": {
-          "code": "List<String> words(String str, {String pattern = '[^a-zA-Z-]+'}) {\n  return str.split(new RegExp(pattern)).where((s) => s.isNotEmpty).toList();\n}",
+          "code": "List<String> words(String str, {String pattern = '[^a-zA-Z-]+'}) {\n  return str.split(RegExp(pattern)).where((s) => s.isNotEmpty).toList();\n}",
           "example": "words('I love dart!!'); // ['I', 'love', 'dart']\nwords('JavaScript, TypeScript & Dart'); // ['JavaScript', 'TypeScript', 'Dart']"
         },
         "tags": [
@@ -1182,11 +1206,11 @@
         ]
       },
       "meta": {
-        "hash": "cf330144c90b90e201d24c6f34cfd91217755c64015080d747047398a6e43ceb",
+        "hash": "c9105c2d0f47f2e521923fb05006049c72b18779f1eac2dbdd031aecb50e5c7b",
         "firstSeen": "1579680695",
-        "lastUpdated": "1579680695",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1580840666",
+        "updateCount": 3,
+        "authorCount": 3
       }
     }
   ],
