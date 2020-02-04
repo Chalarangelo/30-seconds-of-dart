@@ -1,6 +1,6 @@
 ---
 title: randomIntListInRange
-tags: mat,utility,random,intermediate
+tags: math,utility,random,intermediate
 ---
 
 Returns a a list of `n` random integers in the specified range.

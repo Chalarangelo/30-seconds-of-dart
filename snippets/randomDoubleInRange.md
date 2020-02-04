@@ -1,6 +1,6 @@
 ---
 title: randomDoubleInRange
-tags: mat,utility,random,beginner
+tags: math,utility,random,beginner
 ---
 
 Returns a random double in the specified range.
