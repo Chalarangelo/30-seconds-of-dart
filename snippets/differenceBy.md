@@ -1,6 +1,6 @@
 ---
 title: differenceBy
-tags: list,intermediate
+tags: list,math,intermediate
 ---
 
 Returns the difference between two lists, after applying the provided function to each list element of both.
@@ -16,5 +16,5 @@ Iterable<Y> differenceBy<T,Y>(Iterable<T> a, Iterable<T> b, Y Function(T) fn) {
 ```
 
 ```dart
-differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], (v) => v['x'])
+differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], (v) => v['x']); // (2)
 ```
