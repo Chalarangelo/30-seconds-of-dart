@@ -101,6 +101,30 @@
       }
     },
     {
+      "id": "countBy",
+      "title": "countBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "countBy.md",
+        "text": "Groups the elements of a list based on the given function and returns the count of elements in each group.\n\nUse `Iterable.map()` to map each element to the value returned by `fn`, `Iterable.toSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.\n\n",
+        "codeBlocks": {
+          "code": "Map<Y, int> countBy<T, Y>(Iterable<T> itr, Y Function(T) fn) {\n  return new Map.fromIterable(itr.map(fn).toSet(),\n      value: (i) => itr.where((v) => fn(v) == i).length);\n}",
+          "example": "countBy(['one', 'two', 'three'], (v) => v.length); // [{3: 2, 5: 1}]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "c1baaab84777745bf55814e1c1ab708958ef3ffcfc094762f5fa55d98b434b0e",
+        "firstSeen": "1580801859",
+        "lastUpdated": "1580804643",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "decapitalize",
       "title": "decapitalize",
       "type": "snippet",
@@ -145,6 +169,56 @@
         "firstSeen": "1579766566",
         "lastUpdated": "1579766566",
         "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "difference",
+      "title": "difference",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "difference.md",
+        "text": "Returns the difference between two lists.\n\nUse `Iterable.toSet()` to get the unique values in `b`.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in `a` not contained in `b`.\n\n",
+        "codeBlocks": {
+          "code": "Iterable<T> difference<T>(Iterable<T> a, Iterable<T> b) {\n  final s = b.toSet();\n  return a.where((x) => !s.contains(x));\n}",
+          "example": "difference([1, 2, 3], [1, 2, 4]); // (3)"
+        },
+        "tags": [
+          "list",
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "64a11173be832c5d7558e9a705ac86f80c3c13d5002c934870da4c63c08ba0f0",
+        "firstSeen": "1580802251",
+        "lastUpdated": "1580802696",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "differenceBy",
+      "title": "differenceBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "differenceBy.md",
+        "text": "Returns the difference between two lists, after applying the provided function to each list element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `b` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `a`,  `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in the resulting list not contained in the unique mapped values of `b`.\n\n",
+        "codeBlocks": {
+          "code": "Iterable<Y> differenceBy<T,Y>(Iterable<T> a, Iterable<T> b, Y Function(T) fn) {\n  final s = b.map(fn).toSet();\n  return a.map((x) => fn(x)).where((x) => !s.contains(x));\n}",
+          "example": "differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], (v) => v['x']); // (2)"
+        },
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "2a5bd136ee5504c2f8df852722d9f4e2c18548785a163d42b94f7183f9202da3",
+        "firstSeen": "1580803194",
+        "lastUpdated": "1580803781",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -244,6 +318,30 @@
         "firstSeen": "1580308074",
         "lastUpdated": "1580308946",
         "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "groupBy",
+      "title": "groupBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "groupBy.md",
+        "text": "Groups the elements of a list based on the given function.\n\nUse `Iterable.map()` to map each element to the value returned by `fn`, `Iterable.toSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.toList()` to generate a map with the unique values as keys and the list elements as values.\n\n",
+        "codeBlocks": {
+          "code": "Map<Y, List<T>> groupBy<T, Y>(Iterable<T> itr, Y Function(T) fn) {\n  return new Map.fromIterable(itr.map(fn).toSet(),\n      value: (i) => itr.where((v) => fn(v) == i).toList());\n}",
+          "example": "groupBy(['one', 'two', 'three'], (v) => v.length); // {3: ['one', 'two'], 5: ['three']}"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "1a6b3cdba0654798b877f883f0e7a3d9e17588e3dca56b6c5c2f6e78f4f3ef8b",
+        "firstSeen": "1580804643",
+        "lastUpdated": "1580804643",
+        "updateCount": 2,
         "authorCount": 2
       }
     },
@@ -889,6 +987,56 @@
         "firstSeen": "1579628185",
         "lastUpdated": "1579631549",
         "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "symmetricDifference",
+      "title": "symmetricDifference",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "symmetricDifference.md",
+        "text": "Returns the symmetric difference between two lists, without filtering out duplicate values.\n\nUse `Iterable.toSet()` to get the unique values in each list.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in one list and not the other.\nFinally, use `Iterable.toList()` and `Iterable.addAll()` in combination with the cascade operator (`..`) to return the result.\n\n",
+        "codeBlocks": {
+          "code": "List<T> symmetricDifference<T>(List<T> a, List<T> b) {\n  final sA = a.toSet(), sB = b.toSet();\n  return a.where((x) => !sB.contains(x)).toList()\n    ..addAll(b.where((x) => !sA.contains(x)));\n}",
+          "example": "symmetricDifference([1, 2, 3], [1, 2, 4]); // [3, 4]\nsymmetricDifference([1, 2, 2], [1, 3, 1]); // [2, 2, 3]"
+        },
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "fc50b850e4c7d22cd18078218af4b95480af4afb0576b6cf738cd75c8d46bedc",
+        "firstSeen": "1580802696",
+        "lastUpdated": "1580802696",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "symmetricDifferenceBy",
+      "title": "symmetricDifferenceBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "symmetricDifferenceBy.md",
+        "text": "Returns the symmetric difference between two lists, after applying the provided function to each list element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in each list after applying `fn` to them.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in one list and not the other.\nFinally, use `Iterable.toList()` and `Iterable.addAll()` in combination with the cascade operator (`..`) to return the result.\n\n",
+        "codeBlocks": {
+          "code": "List<Y> symmetricdifferenceBy<T,Y>(List<T> a, List<T> b, Y Function(T) fn) {\n  final sA = a.map(fn).toSet(), sB = b.map(fn).toSet();\n  return a.map((x) => fn(x)).where((x) => !sB.contains(x)).toList()\n    ..addAll(b.map((x) => fn(x)).where((x) => !sA.contains(x)));\n}",
+          "example": "symmetricdifferenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }, { 'x': 3 }], (v) => v['x']); // [2, 3]"
+        },
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "cc6d2dc9f680724b5a3c50f73f5d73fc30289d32203eaa62b7062748acb7389b",
+        "firstSeen": "1580803781",
+        "lastUpdated": "1580803781",
+        "updateCount": 2,
         "authorCount": 2
       }
     },

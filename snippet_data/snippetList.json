@@ -65,6 +65,21 @@
       }
     },
     {
+      "id": "countBy",
+      "type": "snippetListing",
+      "title": "countBy",
+      "attributes": {
+        "text": "Groups the elements of a list based on the given function and returns the count of elements in each group.\n\nUse `Iterable.map()` to map each element to the value returned by `fn`, `Iterable.toSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "c1baaab84777745bf55814e1c1ab708958ef3ffcfc094762f5fa55d98b434b0e"
+      }
+    },
+    {
       "id": "decapitalize",
       "type": "snippetListing",
       "title": "decapitalize",
@@ -92,6 +107,38 @@
       },
       "meta": {
         "hash": "2aa2bec371cdd82af6f2cd7464d425d5b39e0c4179c9c1a582f68c733bd405e2"
+      }
+    },
+    {
+      "id": "difference",
+      "type": "snippetListing",
+      "title": "difference",
+      "attributes": {
+        "text": "Returns the difference between two lists.\n\nUse `Iterable.toSet()` to get the unique values in `b`.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in `a` not contained in `b`.\n\n",
+        "tags": [
+          "list",
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "64a11173be832c5d7558e9a705ac86f80c3c13d5002c934870da4c63c08ba0f0"
+      }
+    },
+    {
+      "id": "differenceBy",
+      "type": "snippetListing",
+      "title": "differenceBy",
+      "attributes": {
+        "text": "Returns the difference between two lists, after applying the provided function to each list element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `b` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `a`,  `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in the resulting list not contained in the unique mapped values of `b`.\n\n",
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "2a5bd136ee5504c2f8df852722d9f4e2c18548785a163d42b94f7183f9202da3"
       }
     },
     {
@@ -155,6 +202,21 @@
       },
       "meta": {
         "hash": "e675454e4ec51e2808447bb7a76f85224fcd3edae47a9b55c02c04e87ec0b171"
+      }
+    },
+    {
+      "id": "groupBy",
+      "type": "snippetListing",
+      "title": "groupBy",
+      "attributes": {
+        "text": "Groups the elements of a list based on the given function.\n\nUse `Iterable.map()` to map each element to the value returned by `fn`, `Iterable.toSet()` to get the unique values of the list.\nUse `Map.fromIterable()`, `Iterable.where()` and `Iterable.toList()` to generate a map with the unique values as keys and the list elements as values.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "1a6b3cdba0654798b877f883f0e7a3d9e17588e3dca56b6c5c2f6e78f4f3ef8b"
       }
     },
     {
@@ -566,6 +628,38 @@
       },
       "meta": {
         "hash": "fb15cf3dd1c7c91be045da40ce6894c3ecb2ad84ed5739609e8696493bbb83a5"
+      }
+    },
+    {
+      "id": "symmetricDifference",
+      "type": "snippetListing",
+      "title": "symmetricDifference",
+      "attributes": {
+        "text": "Returns the symmetric difference between two lists, without filtering out duplicate values.\n\nUse `Iterable.toSet()` to get the unique values in each list.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in one list and not the other.\nFinally, use `Iterable.toList()` and `Iterable.addAll()` in combination with the cascade operator (`..`) to return the result.\n\n",
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "fc50b850e4c7d22cd18078218af4b95480af4afb0576b6cf738cd75c8d46bedc"
+      }
+    },
+    {
+      "id": "symmetricDifferenceBy",
+      "type": "snippetListing",
+      "title": "symmetricDifferenceBy",
+      "attributes": {
+        "text": "Returns the symmetric difference between two lists, after applying the provided function to each list element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in each list after applying `fn` to them.\nUse `Iterable.where()` in combination with `Iterable.contains()` to keep only the values in one list and not the other.\nFinally, use `Iterable.toList()` and `Iterable.addAll()` in combination with the cascade operator (`..`) to return the result.\n\n",
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "cc6d2dc9f680724b5a3c50f73f5d73fc30289d32203eaa62b7062748acb7389b"
       }
     },
     {
