@@ -1,6 +1,36 @@
 {
   "data": [
     {
+      "id": "all",
+      "type": "snippetListing",
+      "title": "all",
+      "attributes": {
+        "text": "Returns `true` if the provided predicate function returns `true` for all elements in a collection, `false` otherwise.\n\nUse `Iterable.every()` to check if all elements in the collection return `true` based on `fn`.\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "98ea16363f597ba74b66b27d3c6bb10ecb105b3271b82af6d44fada0cd03e367"
+      }
+    },
+    {
+      "id": "allEqual",
+      "type": "snippetListing",
+      "title": "allEqual",
+      "attributes": {
+        "text": "Check if all elements in a list are equal.\n\nUse `Iterable.every()` to check if all the elements of the list are the same as the first one.\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "75812cb21c2a658ae870dd9a0e73e89bbcf9002f1aa8b179ebcc8345a5f4615a"
+      }
+    },
+    {
       "id": "average",
       "type": "snippetListing",
       "title": "average",
@@ -471,6 +501,21 @@
       }
     },
     {
+      "id": "none",
+      "type": "snippetListing",
+      "title": "none",
+      "attributes": {
+        "text": "Returns `true` if the provided predicate function returns `false` for all elements in a collection, `false` otherwise.\n\nUse `Iterable.some()` to test if any elements in the collection return `true` based on `fn`. \n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "09493c4fe4fd5f3e63b8f5926b503bd8679241da303f7b9d5d69900cbad29f4b"
+      }
+    },
+    {
       "id": "pad",
       "type": "snippetListing",
       "title": "pad",
@@ -595,6 +640,21 @@
       },
       "meta": {
         "hash": "3b1ae3d2faedb8317fcbca853e17ab0482c08c5f8fef79c44ae2a6a5da19da94"
+      }
+    },
+    {
+      "id": "some",
+      "type": "snippetListing",
+      "title": "some",
+      "attributes": {
+        "text": "Returns `true` if the provided predicate function returns `true` for at least one element in a collection, `false` otherwise.\n\nUse `Iterable.any()` to test if any elements in the collection return `true` based on `fn`.\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "93e66a12cf8a5489fd28039ace53880213a6a6125ac1980c75a79dee617d5f80"
       }
     },
     {
