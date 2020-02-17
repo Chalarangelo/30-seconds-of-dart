@@ -64,6 +64,21 @@
       }
     },
     {
+      "id": "bifurcateBy",
+      "type": "snippetListing",
+      "title": "bifurcateBy",
+      "attributes": {
+        "text": "Splits values into two groups according to a predicate function, which specifies which group an element in the input collection belongs to. \nIf the predicate function returns `true`, the collection element belongs to the first group; otherwise, it belongs to the second group.\n\nUse `Iterable.retainWhere()` and `Iterable.removeWhere()` in combination with the cascade operator (`..`) and `List.from()` to create the appropriate groups using the `filter` function.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "b8a040f86c7d20dfb025ec64e5a0799d5e5cf2a880fea804e59fae6d4447184c"
+      }
+    },
+    {
       "id": "capitalize",
       "type": "snippetListing",
       "title": "capitalize",
