@@ -172,6 +172,30 @@
       }
     },
     {
+      "id": "compact",
+      "title": "compact",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "compact.md",
+        "text": "Removes falsy values from a list.\n\nUse `Iterable.removeWhere()` in combination with the cascade operator (`..`) to filter out falsy values (`false`, `null`).\n\n",
+        "codeBlocks": {
+          "code": "List<T> compact<T>(List<T> lst) {\n  return lst..removeWhere((v) => [null, false].contains(v));\n}",
+          "example": "compact([0, 1, false, 2, 3, 'a', null, 'b']); // [0, 1, 2, 3, 'a', 'b']"
+        },
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "2144c5acd75e9fd1bdbe12b0683cc160c689a1e84e7f8048fc618559cc33e619",
+        "firstSeen": "1582034667",
+        "lastUpdated": "1582034667",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "compactWhitespace",
       "title": "compactWhitespace",
       "type": "snippet",
@@ -339,6 +363,54 @@
         "hash": "f086785dd97709ad42f07477489d518ecf45791c878ebb74a71a27074a56000f",
         "firstSeen": "1579704973",
         "lastUpdated": "1579704973",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "drop",
+      "title": "drop",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "drop.md",
+        "text": "Returns a new list with `n` elements removed from the left.\n\nUse `List.sublist()` to remove the specified number of elements from the left.\n\n",
+        "codeBlocks": {
+          "code": "List<T> drop<T>(List<T> lst, [int n = 1]) {\n  return lst.sublist(n);\n}",
+          "example": "drop([1, 2, 3]); // [2,3]\ndrop([1, 2, 3], 2); // [3]"
+        },
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "bfffee4f1f69c1b63b88baa4f56868f9854f6978a45c6635a91c734b00fc0a60",
+        "firstSeen": "1582035082",
+        "lastUpdated": "1582035082",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "dropRight",
+      "title": "dropRight",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "dropRight.md",
+        "text": "Returns a new list with `n` elements removed from the right.\n\nUse `List.sublist()` to remove the specified number of elements from the right.\n\n",
+        "codeBlocks": {
+          "code": "List<T> dropRight<T>(List<T> lst, [int n = 1]) {\n  return lst.sublist(0, lst.length - n);\n}",
+          "example": "dropRight([1, 2, 3]); // [1,2]\ndropRight([1, 2, 3], 2); // [1]"
+        },
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "b45deb626e25b4225a02f3ebbf224f8ab55aa1982bb00a2d68a18781d11779cd",
+        "firstSeen": "1582035082",
+        "lastUpdated": "1582035082",
         "updateCount": 2,
         "authorCount": 2
       }

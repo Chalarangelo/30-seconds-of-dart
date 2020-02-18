@@ -109,6 +109,21 @@
       }
     },
     {
+      "id": "compact",
+      "type": "snippetListing",
+      "title": "compact",
+      "attributes": {
+        "text": "Removes falsy values from a list.\n\nUse `Iterable.removeWhere()` in combination with the cascade operator (`..`) to filter out falsy values (`false`, `null`).\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "2144c5acd75e9fd1bdbe12b0683cc160c689a1e84e7f8048fc618559cc33e619"
+      }
+    },
+    {
       "id": "compactWhitespace",
       "type": "snippetListing",
       "title": "compactWhitespace",
@@ -215,6 +230,36 @@
       },
       "meta": {
         "hash": "f086785dd97709ad42f07477489d518ecf45791c878ebb74a71a27074a56000f"
+      }
+    },
+    {
+      "id": "drop",
+      "type": "snippetListing",
+      "title": "drop",
+      "attributes": {
+        "text": "Returns a new list with `n` elements removed from the left.\n\nUse `List.sublist()` to remove the specified number of elements from the left.\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "bfffee4f1f69c1b63b88baa4f56868f9854f6978a45c6635a91c734b00fc0a60"
+      }
+    },
+    {
+      "id": "dropRight",
+      "type": "snippetListing",
+      "title": "dropRight",
+      "attributes": {
+        "text": "Returns a new list with `n` elements removed from the right.\n\nUse `List.sublist()` to remove the specified number of elements from the right.\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "b45deb626e25b4225a02f3ebbf224f8ab55aa1982bb00a2d68a18781d11779cd"
       }
     },
     {
