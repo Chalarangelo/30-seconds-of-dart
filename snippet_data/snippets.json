@@ -416,6 +416,54 @@
       }
     },
     {
+      "id": "dropRightWhile",
+      "title": "dropRightWhile",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "dropRightWhile.md",
+        "text": "Removes elements from the end of a list until the passed function returns `true` and returns the remaining elements.\n\nUse `List.lastIndexWhere()` with the `test` function to find the last element that returns `true`.\nReturn an empty array if there are no matching elements, otherwise use `List.sublist()` to return the remaining elements.\n\n",
+        "codeBlocks": {
+          "code": "List<T> dropRightWhile<T>(List<T> lst, bool Function(T) test) {\n  int rightIndex = lst.lastIndexWhere(test);\n  return rightIndex == -1 ? [] : lst.sublist(0, rightIndex + 1);\n}",
+          "example": "dropRightWhile([1, 2, 3, 4], (n) => n < 3); // [1, 2]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "d048a9df997d31c3a5f52ebee917aa5d98b89f19c68dea995f6bcd18635b8ab5",
+        "firstSeen": "1582035635",
+        "lastUpdated": "1582035635",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "dropWhile",
+      "title": "dropWhile",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "dropWhile.md",
+        "text": "Removes elements from the start of a list until the passed function returns `true` and returns the remaining elements.\n\nUse `List.indexWhere()` with the `test` function to find the first element that returns `true`.\nReturn an empty array if there are no matching elements, otherwise use `List.sublist()` to return the remaining elements.\n\n",
+        "codeBlocks": {
+          "code": "List<T> dropWhile<T>(List<T> lst, bool Function(T) test) {\n  int leftIndex = lst.indexWhere(test);\n  return leftIndex == -1 ? [] : lst.sublist(leftIndex);\n}",
+          "example": "dropWhile([1, 2, 3, 4], (n) => n >= 3); // [3, 4]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "0d54116c04726cebf6c663b9024ccc3d20a3d22110a1001638ae80b79a48be90",
+        "firstSeen": "1582035635",
+        "lastUpdated": "1582035635",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "factorial",
       "title": "factorial",
       "type": "snippet",

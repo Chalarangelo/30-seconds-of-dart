@@ -263,6 +263,36 @@
       }
     },
     {
+      "id": "dropRightWhile",
+      "type": "snippetListing",
+      "title": "dropRightWhile",
+      "attributes": {
+        "text": "Removes elements from the end of a list until the passed function returns `true` and returns the remaining elements.\n\nUse `List.lastIndexWhere()` with the `test` function to find the last element that returns `true`.\nReturn an empty array if there are no matching elements, otherwise use `List.sublist()` to return the remaining elements.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "d048a9df997d31c3a5f52ebee917aa5d98b89f19c68dea995f6bcd18635b8ab5"
+      }
+    },
+    {
+      "id": "dropWhile",
+      "type": "snippetListing",
+      "title": "dropWhile",
+      "attributes": {
+        "text": "Removes elements from the start of a list until the passed function returns `true` and returns the remaining elements.\n\nUse `List.indexWhere()` with the `test` function to find the first element that returns `true`.\nReturn an empty array if there are no matching elements, otherwise use `List.sublist()` to return the remaining elements.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "0d54116c04726cebf6c663b9024ccc3d20a3d22110a1001638ae80b79a48be90"
+      }
+    },
+    {
       "id": "factorial",
       "type": "snippetListing",
       "title": "factorial",
