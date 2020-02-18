@@ -931,6 +931,22 @@
       }
     },
     {
+      "id": "sample",
+      "type": "snippetListing",
+      "title": "sample",
+      "attributes": {
+        "text": "Returns a random element from a list.\n\nUse `Random.nextInt()` to generate a random integer between `0` and `lst.length` and return the list element at that index.\n\n",
+        "tags": [
+          "list",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c612c849a421c86738f1acb1c07306bc66a8c471c51154a565366675f5b9e74e"
+      }
+    },
+    {
       "id": "slice",
       "type": "snippetListing",
       "title": "slice",
@@ -1132,6 +1148,38 @@
       },
       "meta": {
         "hash": "12f8fd6f79899f2f9a894a9903a5f355ae4f360285a9474936e446301fee574c"
+      }
+    },
+    {
+      "id": "union",
+      "type": "snippetListing",
+      "title": "union",
+      "attributes": {
+        "text": "Returns every element that exists in any of the two lists once.\n\nUse the plus operator (`+`) to concatenate `a` and `b`, `Iterable.toSet()` to get the unique values, `Iterable.toList()` to return a list.\n\n",
+        "tags": [
+          "list",
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "ddcce51150bac17d1d41b0063a418c0585c056e7663e1de0cdf60f9fd0b03f19"
+      }
+    },
+    {
+      "id": "unionBy",
+      "type": "snippetListing",
+      "title": "unionBy",
+      "attributes": {
+        "text": "Returns every element that exists in any of the two lists once, after applying the provided function to each element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `a` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `b`, `Iterable.toSet()`, `Iterable.where()` and `Iterable.contains()` to keep only the values in the resulting list contained in the unique mapped values of `a`, `Iterable.toList()` to return the appropriate result.\nFinally, use the plus operator (`+`) to concatenate the two lists and return the result.\n\n",
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "8f7ce7e18a81a74f7fe331eddec16251821db805db3ecce3d8db11f39f28fc2f"
       }
     },
     {
