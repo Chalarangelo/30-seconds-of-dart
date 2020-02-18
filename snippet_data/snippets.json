@@ -712,7 +712,7 @@
       "type": "snippet",
       "attributes": {
         "fileName": "head.md",
-        "text": "Returns the head of a list.\n\nCheck if `lst`has a non-zero length, use `lst[0]` if possible to return the first element, otherwise return `null`.\n\n",
+        "text": "Returns the head of a list.\n\nCheck if `lst` has a non-zero length, use `lst[0]` if possible to return the first element, otherwise return `null`.\n\n",
         "codeBlocks": {
           "code": "T head<T>(List<T> lst) {\n  return lst.length > 0 ? lst[0] : null;\n}",
           "example": "head([1, 2, 3]); // 1\nhead([1]); // 1\nhead([]); // null"
@@ -723,10 +723,10 @@
         ]
       },
       "meta": {
-        "hash": "c911a8430d0142435db37c691345a999d14cd1f9d7f11ca47c799e59f50a83ff",
+        "hash": "1c4582ee99facd623e94d231265ed60a7d89c7c8e197f2fdc0bdb8688f43b33b",
         "firstSeen": "1582051248",
-        "lastUpdated": "1582051248",
-        "updateCount": 2,
+        "lastUpdated": "1582056478",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -1017,6 +1017,30 @@
         "hash": "856c4cdd2a615a427bc09e5116c560533befc5f01a1e5ee483e9318b98287f9b",
         "firstSeen": "1579703353",
         "lastUpdated": "1579703353",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "last",
+      "title": "last",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "last.md",
+        "text": "Returns the last element in a list.\n\nCheck if `lst` has a non-zero length, use `lst[lst.length - 1]` if possible to return the last element, otherwise return `null`.\n\n",
+        "codeBlocks": {
+          "code": "T head<T>(List<T> lst) {\n  return lst.length > 0 ? lst[lst.length - 1] : null;\n}",
+          "example": "head([1, 2, 3]); // 3\nhead([1]); // 1\nhead([]); // null"
+        },
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "48d6f1583601439f134034234a81e172be1cba56c8fe70a4277daef9cec5c34d",
+        "firstSeen": "1582056478",
+        "lastUpdated": "1582056478",
         "updateCount": 2,
         "authorCount": 2
       }
