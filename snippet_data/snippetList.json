@@ -506,6 +506,38 @@
       }
     },
     {
+      "id": "intersection",
+      "type": "snippetListing",
+      "title": "intersection",
+      "attributes": {
+        "text": "Returns a list of elements that exist in both lists.\n\nUse `Iterable.toSet()` to get the unique values in `b`.\nUse `Iterable.toSet()`, `Iterable.where()` and `Iterable.contains()` to keep only the values in `a` contained in `b`, `Iterable.toList()` to return the appropriate result.\n\n",
+        "tags": [
+          "list",
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "885e5dcf725bc1b658a9b6ce3448b78d789b75f287f0ee2feebe7fdbd81f8ad2"
+      }
+    },
+    {
+      "id": "intersectionBy",
+      "type": "snippetListing",
+      "title": "intersectionBy",
+      "attributes": {
+        "text": "Returns a list of elements that exist in both lists, after applying the provided function to each element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `b` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `a`, `Iterable.toSet()`, `Iterable.where()` and `Iterable.contains()` to keep only the values in the resulting list contained in the unique mapped values of `b`, `Iterable.toList()` to return the appropriate result.\n\n",
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "1f86247da528feaff99b9612fec35a2579fb2e366e31948a94b239df6f8c6aeb"
+      }
+    },
+    {
       "id": "isAnagram",
       "type": "snippetListing",
       "title": "isAnagram",

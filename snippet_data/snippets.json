@@ -803,6 +803,56 @@
       }
     },
     {
+      "id": "intersection",
+      "title": "intersection",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "intersection.md",
+        "text": "Returns a list of elements that exist in both lists.\n\nUse `Iterable.toSet()` to get the unique values in `b`.\nUse `Iterable.toSet()`, `Iterable.where()` and `Iterable.contains()` to keep only the values in `a` contained in `b`, `Iterable.toList()` to return the appropriate result.\n\n",
+        "codeBlocks": {
+          "code": "List<T> intersection<T>(Iterable<T> a, Iterable<T> b) {\n  final s = b.toSet();\n  return a.toSet().where((x) => s.contains(x)).toList();\n}",
+          "example": "intersection([1, 2, 3], [1, 2, 4]); // [1, 2]"
+        },
+        "tags": [
+          "list",
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "885e5dcf725bc1b658a9b6ce3448b78d789b75f287f0ee2feebe7fdbd81f8ad2",
+        "firstSeen": "1582055240",
+        "lastUpdated": "1582055240",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "intersectionBy",
+      "title": "intersectionBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "intersectionBy.md",
+        "text": "Returns a list of elements that exist in both lists, after applying the provided function to each element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `b` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `a`, `Iterable.toSet()`, `Iterable.where()` and `Iterable.contains()` to keep only the values in the resulting list contained in the unique mapped values of `b`, `Iterable.toList()` to return the appropriate result.\n\n",
+        "codeBlocks": {
+          "code": "List<Y> intersectionBy<T, Y>(Iterable<T> a, Iterable<T> b, Y Function(T) fn) {\n  final s = b.map(fn).toSet();\n  return a.toSet().map((x) => fn(x)).where((x) => s.contains(x)).toList();\n}",
+          "example": "intersectionBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], (v) => v['x']); // [1]"
+        },
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "1f86247da528feaff99b9612fec35a2579fb2e366e31948a94b239df6f8c6aeb",
+        "firstSeen": "1582055240",
+        "lastUpdated": "1582055240",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "isAnagram",
       "title": "isAnagram",
       "type": "snippet",
