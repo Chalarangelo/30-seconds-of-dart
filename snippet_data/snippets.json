@@ -1022,6 +1022,30 @@
       }
     },
     {
+      "id": "mapList",
+      "title": "mapList",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "mapList.md",
+        "text": "Maps the values of a list using a function, where the key-value pairs consist of the value as the key and the mapped value.\n\nUse `Map.fromIterable()` to generate a map with the original values as keys and their mapped values as values.\n\n",
+        "codeBlocks": {
+          "code": "Map<T, Y> mapList<T, Y>(Iterable<T> itr, Y Function(T) fn) {\n  return Map.fromIterable(itr, key: (i) => i, value: (i) => fn(i));\n}",
+          "example": "mapList([1, 2, 3], (a) => a * a); // [{1: 1, 2: 4, 3: 9}]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "937d41e556fbcecc6b6d6dd3028d0556c9e89619fec6a5747d77cc9e13e5b77e",
+        "firstSeen": "1582056412",
+        "lastUpdated": "1582056412",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "mapNumRange",
       "title": "mapNumRange",
       "type": "snippet",
