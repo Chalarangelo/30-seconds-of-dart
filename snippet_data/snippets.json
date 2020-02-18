@@ -707,6 +707,30 @@
       }
     },
     {
+      "id": "head",
+      "title": "head",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "head.md",
+        "text": "Returns the head of a list.\n\nCheck if `lst`has a non-zero length, use `lst[0]` if possible to return the first element, otherwise return `null`.\n\n",
+        "codeBlocks": {
+          "code": "T head<T>(List<T> lst) {\n  return lst.length > 0 ? lst[0] : null;\n}",
+          "example": "head([1, 2, 3]); // 1\nhead([1]); // 1\nhead([]); // null"
+        },
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c911a8430d0142435db37c691345a999d14cd1f9d7f11ca47c799e59f50a83ff",
+        "firstSeen": "1582051248",
+        "lastUpdated": "1582051248",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "includesAll",
       "title": "includesAll",
       "type": "snippet",
@@ -750,6 +774,30 @@
         "hash": "25bd06ced8c12978cfa7ed346d8d9e8087e9caac8006bf0a1f95aa1424f33fc9",
         "firstSeen": "1582050104",
         "lastUpdated": "1582050104",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "initial",
+      "title": "initial",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "initial.md",
+        "text": "Returns all the elements of a list except the last one.\n\nCheck if `lst` has the appropriate length, use `List.sublist(0, lst.length - 1)` if possible to return the result, otherwise return `lst`.\n\n",
+        "codeBlocks": {
+          "code": "List<T> initial<T>(List<T> lst) {\n  return lst.length > 1 ? lst.sublist(0, lst.length - 1) : lst;\n}",
+          "example": "initial([1, 2, 3]); // [1, 2]\ninitial([1]); // [1]\ninitial([]); // []"
+        },
+        "tags": [
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "bcfee93b01b5071c0384abdd23752417c0d7bea5914b53e66d24a97ca3616523",
+        "firstSeen": "1582051248",
+        "lastUpdated": "1582051248",
         "updateCount": 2,
         "authorCount": 2
       }
@@ -1493,6 +1541,30 @@
         "hash": "cc6d2dc9f680724b5a3c50f73f5d73fc30289d32203eaa62b7062748acb7389b",
         "firstSeen": "1580803781",
         "lastUpdated": "1580803781",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "tail",
+      "title": "tail",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "tail.md",
+        "text": "Returns all the elements of a list except the first one.\n\nCheck if `lst` has the appropriate length, use `List.sublist(1, lst.length)` if possible to return the result, otherwise return `lst`.\n\n",
+        "codeBlocks": {
+          "code": "List<T> tail<T>(List<T> lst) {\n  return lst.length > 1 ? lst.sublist(1, lst.length) : lst;\n}",
+          "example": "tail([1, 2, 3]); // [2, 3]\ntail([1]); // [1]\ntail([]); // []"
+        },
+        "tags": [
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "269a6b68ea441460ecb72d551b0e6c53bf0346c63d1b6be73fa7747c6badc9bf",
+        "firstSeen": "1582051248",
+        "lastUpdated": "1582051248",
         "updateCount": 2,
         "authorCount": 2
       }
