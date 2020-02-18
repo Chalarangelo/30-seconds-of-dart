@@ -464,6 +464,30 @@
       }
     },
     {
+      "id": "everyNth",
+      "title": "everyNth",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "everyNth.md",
+        "text": "Returns every nth element in a list.\n\nUse `List.generate()` to generate a list that fits the number of elements that will be returned, then add every `nth` element to it.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math';\n\nList<T> everyNth<T>(List<T> lst, int nth) {\n  return List.generate(\n    (lst.length / nth).floor(), (i) => lst[(i + 1) * nth - 1]);\n}",
+          "example": "everyNth([1, 2, 3, 4, 5, 6], 2); // [ 2, 4, 6 ]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "964176707721e2ead8377d4570b95b63adcfe7b455b2b9e116a40c316a44fdc9",
+        "firstSeen": "1582036311",
+        "lastUpdated": "1582036311",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "factorial",
       "title": "factorial",
       "type": "snippet",

@@ -293,6 +293,21 @@
       }
     },
     {
+      "id": "everyNth",
+      "type": "snippetListing",
+      "title": "everyNth",
+      "attributes": {
+        "text": "Returns every nth element in a list.\n\nUse `List.generate()` to generate a list that fits the number of elements that will be returned, then add every `nth` element to it.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "964176707721e2ead8377d4570b95b63adcfe7b455b2b9e116a40c316a44fdc9"
+      }
+    },
+    {
       "id": "factorial",
       "type": "snippetListing",
       "title": "factorial",
