@@ -1471,6 +1471,31 @@
       }
     },
     {
+      "id": "sample",
+      "title": "sample",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "sample.md",
+        "text": "Returns a random element from a list.\n\nUse `Random.nextInt()` to generate a random integer between `0` and `lst.length` and return the list element at that index.\n\n",
+        "codeBlocks": {
+          "code": "import 'dart:math';\n\nT sample<T>(List<T> lst) {\n  return lst[Random().nextInt(lst.length)];\n}",
+          "example": "sample([3, 7, 9, 11]); // 9"
+        },
+        "tags": [
+          "list",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c612c849a421c86738f1acb1c07306bc66a8c471c51154a565366675f5b9e74e",
+        "firstSeen": "1582057868",
+        "lastUpdated": "1582057868",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "slice",
       "title": "slice",
       "type": "snippet",
@@ -1787,6 +1812,56 @@
         "hash": "12f8fd6f79899f2f9a894a9903a5f355ae4f360285a9474936e446301fee574c",
         "firstSeen": "1579703363",
         "lastUpdated": "1579703363",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "union",
+      "title": "union",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "union.md",
+        "text": "Returns every element that exists in any of the two lists once.\n\nUse the plus operator (`+`) to concatenate `a` and `b`, `Iterable.toSet()` to get the unique values, `Iterable.toList()` to return a list.\n\n",
+        "codeBlocks": {
+          "code": "List<T> union<T>(Iterable<T> a, Iterable<T> b) {\n  return (a.toList() + b.toList()).toSet().toList();\n}",
+          "example": "union([1, 2, 3], [4, 3, 2]); // [1, 2, 3, 4]"
+        },
+        "tags": [
+          "list",
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "ddcce51150bac17d1d41b0063a418c0585c056e7663e1de0cdf60f9fd0b03f19",
+        "firstSeen": "1582057863",
+        "lastUpdated": "1582057863",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "unionBy",
+      "title": "unionBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "unionBy.md",
+        "text": "Returns every element that exists in any of the two lists once, after applying the provided function to each element of both.\n\nUse `Iterable.toSet()` and `Iterable.map()` to get the unique values in `a` after applying `fn` to them.\nUse `Iterable.map()` to apply `fn` to all the values of `b`, `Iterable.toSet()`, `Iterable.where()` and `Iterable.contains()` to keep only the values in the resulting list contained in the unique mapped values of `a`, `Iterable.toList()` to return the appropriate result.\nFinally, use the plus operator (`+`) to concatenate the two lists and return the result.\n\n",
+        "codeBlocks": {
+          "code": "List<Y> unionBy<T, Y>(Iterable<T> a, Iterable<T> b, Y Function(T) fn) {\n  final sA = a.map(fn).toSet().toList();\n  final sB = b.map(fn).toSet().where((x) => !sA.contains(x)).toList();\n  return sA + sB;\n}",
+          "example": "unionBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], (v) => v['x']); // [2, 1]"
+        },
+        "tags": [
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "8f7ce7e18a81a74f7fe331eddec16251821db805db3ecce3d8db11f39f28fc2f",
+        "firstSeen": "1582057863",
+        "lastUpdated": "1582057863",
         "updateCount": 2,
         "authorCount": 2
       }
