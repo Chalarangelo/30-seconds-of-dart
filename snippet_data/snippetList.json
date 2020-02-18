@@ -355,6 +355,36 @@
       }
     },
     {
+      "id": "filterNonUnique",
+      "type": "snippetListing",
+      "title": "filterNonUnique",
+      "attributes": {
+        "text": "Filters out the non-unique values in a list.\n\nUse `Iterable.where()` in combination with `List.indexOf()` and `List.lastIndexOf()` to filter out the non-unique values.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "a8e1fea1d588656228eadd12445b9422fe7b1e4f91413fd0c28f0ca5f1d7458a"
+      }
+    },
+    {
+      "id": "filterUnique",
+      "type": "snippetListing",
+      "title": "filterUnique",
+      "attributes": {
+        "text": "Filters out the unique values in a list.\n\nUse `Iterable.where()` in combination with `List.indexOf()` and `List.lastIndexOf()` to filter out the unique values.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "401dfe961041274581da4effe2f545521976b7d67fcbc83a25adb0c3ba0f191e"
+      }
+    },
+    {
       "id": "frequencies",
       "type": "snippetListing",
       "title": "frequencies",

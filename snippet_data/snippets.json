@@ -562,6 +562,54 @@
       }
     },
     {
+      "id": "filterNonUnique",
+      "title": "filterNonUnique",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "filterNonUnique.md",
+        "text": "Filters out the non-unique values in a list.\n\nUse `Iterable.where()` in combination with `List.indexOf()` and `List.lastIndexOf()` to filter out the non-unique values.\n\n",
+        "codeBlocks": {
+          "code": "List<T> filterNonUnique<T>(List<T> lst) {\n  return lst.where((i) => lst.indexOf(i) == lst.lastIndexOf(i)).toList();\n}",
+          "example": "filterNonUnique([1, 2, 2, 3, 4, 4, 5]); // [1, 3, 5]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "a8e1fea1d588656228eadd12445b9422fe7b1e4f91413fd0c28f0ca5f1d7458a",
+        "firstSeen": "1582039483",
+        "lastUpdated": "1582039483",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "filterUnique",
+      "title": "filterUnique",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "filterUnique.md",
+        "text": "Filters out the unique values in a list.\n\nUse `Iterable.where()` in combination with `List.indexOf()` and `List.lastIndexOf()` to filter out the unique values.\n\n",
+        "codeBlocks": {
+          "code": "List<T> filterUnique<T>(List<T> lst) {\n  return lst.where((i) => lst.indexOf(i) != lst.lastIndexOf(i)).toList();\n}",
+          "example": "filterUnique([1, 2, 2, 3, 4, 4, 5]); // [2, 2, 4, 4]"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "401dfe961041274581da4effe2f545521976b7d67fcbc83a25adb0c3ba0f191e",
+        "firstSeen": "1582039483",
+        "lastUpdated": "1582039483",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "frequencies",
       "title": "frequencies",
       "type": "snippet",
