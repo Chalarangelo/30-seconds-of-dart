@@ -233,6 +233,21 @@
       }
     },
     {
+      "id": "distinct",
+      "type": "snippetListing",
+      "title": "distinct",
+      "attributes": {
+        "text": "Returns the distinct values in a list.\n\nUse `List.toSet()` to get the distinct values in the list, `Set.toList()` to return them as a list.\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c469689d664ad0524382176b6e141ff30e91bd250d08fa31a20e26d6aeb87638"
+      }
+    },
+    {
       "id": "drop",
       "type": "snippetListing",
       "title": "drop",
