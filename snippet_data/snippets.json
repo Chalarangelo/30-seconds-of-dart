@@ -610,6 +610,31 @@
       }
     },
     {
+      "id": "flatten",
+      "title": "flatten",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "flatten.md",
+        "text": "Flattens a list.\n\nUse recursion.\nUse `Iterable.expand()` to combine elements into a single list, calling `flatten` recursively for any elements that are `List`s.\n\n",
+        "codeBlocks": {
+          "code": "List<T> flatten<T>(List<T> lst) {\n  return lst.expand((e) => e is List ? flatten(e) : [e]).toList();\n}",
+          "example": "flatten([1, [2], [[3], 4], 5]); // [1, 2, 3, 4, 5]"
+        },
+        "tags": [
+          "list",
+          "recursion",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "7349b778fd1ebed6a1d03e594b99355f84c56d9ab4f48a4b6d3bd049a85c27a9",
+        "firstSeen": "1582040256",
+        "lastUpdated": "1582040256",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "frequencies",
       "title": "frequencies",
       "type": "snippet",

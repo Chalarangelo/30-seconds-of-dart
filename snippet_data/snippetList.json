@@ -385,6 +385,22 @@
       }
     },
     {
+      "id": "flatten",
+      "type": "snippetListing",
+      "title": "flatten",
+      "attributes": {
+        "text": "Flattens a list.\n\nUse recursion.\nUse `Iterable.expand()` to combine elements into a single list, calling `flatten` recursively for any elements that are `List`s.\n\n",
+        "tags": [
+          "list",
+          "recursion",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "7349b778fd1ebed6a1d03e594b99355f84c56d9ab4f48a4b6d3bd049a85c27a9"
+      }
+    },
+    {
       "id": "frequencies",
       "type": "snippetListing",
       "title": "frequencies",
