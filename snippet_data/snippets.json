@@ -1296,6 +1296,30 @@
       }
     },
     {
+      "id": "nth",
+      "title": "nth",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "nth.md",
+        "text": "Returns the nth element of a list.\n\nCheck if `lst` has a length greater than `n`, use `lst[n]` if possible to return the nth element, otherwise return `null`.\nOmit the second argument, `n`, to get the first element of the list.\n\n",
+        "codeBlocks": {
+          "code": "T nth<T>(List<T> lst, [n = 0]) {\n  return lst.length > n ? lst[n] : null;\n}",
+          "example": "nth(['a', 'b', 'c'], 1); // 'b'"
+        },
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e979922e6fd22d31ed89ca338c87385e523ae66b2efda1804f2d035218d13855",
+        "firstSeen": "1582057980",
+        "lastUpdated": "1582057980",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "pad",
       "title": "pad",
       "type": "snippet",

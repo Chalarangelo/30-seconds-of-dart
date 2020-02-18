@@ -819,6 +819,21 @@
       }
     },
     {
+      "id": "nth",
+      "type": "snippetListing",
+      "title": "nth",
+      "attributes": {
+        "text": "Returns the nth element of a list.\n\nCheck if `lst` has a length greater than `n`, use `lst[n]` if possible to return the nth element, otherwise return `null`.\nOmit the second argument, `n`, to get the first element of the list.\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e979922e6fd22d31ed89ca338c87385e523ae66b2efda1804f2d035218d13855"
+      }
+    },
+    {
       "id": "pad",
       "type": "snippetListing",
       "title": "pad",
