@@ -683,6 +683,78 @@
       }
     },
     {
+      "id": "haveSameContents",
+      "title": "haveSameContents",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "haveSameContents.md",
+        "text": "Returns `true` if two lists contain the same elements regardless of order, `false` otherwise.\n\n\nUse the plus operator (`+`) to concatenate `a` and `b`, `Iterable.toSet()` to get all the unique values.\nUse a `for..in` loop and compare the occurence count of each value between the two lists.\nReturn `false` if any occurence count doesn't match, `true` otherwise.\n\n",
+        "codeBlocks": {
+          "code": "bool haveSameContents<T>(List<T> a, List<T> b) {\n  for (T v in (a + b).toSet())\n    if (a.where((e) => e == v).length != b.where((e) => e == v).length)\n      return false;\n  return true;\n}",
+          "example": "haveSameContents([1, 2, 4], [2, 4, 1]); // true"
+        },
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "05fdf581c4f76d5a4f526410f30cc9be5545364670114ed958abcc18c87173ce",
+        "firstSeen": "1582050104",
+        "lastUpdated": "1582050104",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "includesAll",
+      "title": "includesAll",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "includesAll.md",
+        "text": "Returns `true` if all the elements in `values` are included in `itr`, `false` otherwise.\n\nUse `Iterable.every()` and `Iterable.contains()` to check if all elements of `values` are included in `itr`.\n\n",
+        "codeBlocks": {
+          "code": "bool includesAll<T>(Iterable<T> itr, Iterable<T> values) {\n  return values.every((v) => itr.contains(v));\n}",
+          "example": "includesAll([1, 2, 3, 4], [1, 4]); // true\nincludesAll([1, 2, 3, 4], [1, 5]); // false"
+        },
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "767900bb6e65fa036ef30d79c3d03b51a84d1d2b56519ea616fae5014b779487",
+        "firstSeen": "1582050104",
+        "lastUpdated": "1582050104",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "includesAny",
+      "title": "includesAny",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "includesAny.md",
+        "text": "Returns `true` if any of the elements in `values` are included in `itr`, `false` otherwise.\n\nUse `Iterable.any()` and `Iterable.contains()` to check if any elements of `values` are included in `itr`.\n\n",
+        "codeBlocks": {
+          "code": "bool includesAny<T>(Iterable<T> itr, Iterable<T> values) {\n  return values.any((v) => itr.contains(v));\n}",
+          "example": "includesAny([1, 2, 3, 4], [2, 9]); // true\nincludesAny([1, 2, 3, 4], [8, 9]); // false"
+        },
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "25bd06ced8c12978cfa7ed346d8d9e8087e9caac8006bf0a1f95aa1424f33fc9",
+        "firstSeen": "1582050104",
+        "lastUpdated": "1582050104",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "isAnagram",
       "title": "isAnagram",
       "type": "snippet",

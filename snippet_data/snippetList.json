@@ -431,6 +431,51 @@
       }
     },
     {
+      "id": "haveSameContents",
+      "type": "snippetListing",
+      "title": "haveSameContents",
+      "attributes": {
+        "text": "Returns `true` if two lists contain the same elements regardless of order, `false` otherwise.\n\n\nUse the plus operator (`+`) to concatenate `a` and `b`, `Iterable.toSet()` to get all the unique values.\nUse a `for..in` loop and compare the occurence count of each value between the two lists.\nReturn `false` if any occurence count doesn't match, `true` otherwise.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "05fdf581c4f76d5a4f526410f30cc9be5545364670114ed958abcc18c87173ce"
+      }
+    },
+    {
+      "id": "includesAll",
+      "type": "snippetListing",
+      "title": "includesAll",
+      "attributes": {
+        "text": "Returns `true` if all the elements in `values` are included in `itr`, `false` otherwise.\n\nUse `Iterable.every()` and `Iterable.contains()` to check if all elements of `values` are included in `itr`.\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "767900bb6e65fa036ef30d79c3d03b51a84d1d2b56519ea616fae5014b779487"
+      }
+    },
+    {
+      "id": "includesAny",
+      "type": "snippetListing",
+      "title": "includesAny",
+      "attributes": {
+        "text": "Returns `true` if any of the elements in `values` are included in `itr`, `false` otherwise.\n\nUse `Iterable.any()` and `Iterable.contains()` to check if any elements of `values` are included in `itr`.\n\n",
+        "tags": [
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "25bd06ced8c12978cfa7ed346d8d9e8087e9caac8006bf0a1f95aa1424f33fc9"
+      }
+    },
+    {
       "id": "isAnagram",
       "type": "snippetListing",
       "title": "isAnagram",
