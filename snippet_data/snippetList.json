@@ -644,6 +644,21 @@
       }
     },
     {
+      "id": "mapList",
+      "type": "snippetListing",
+      "title": "mapList",
+      "attributes": {
+        "text": "Maps the values of a list using a function, where the key-value pairs consist of the value as the key and the mapped value.\n\nUse `Map.fromIterable()` to generate a map with the original values as keys and their mapped values as values.\n\n",
+        "tags": [
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "937d41e556fbcecc6b6d6dd3028d0556c9e89619fec6a5747d77cc9e13e5b77e"
+      }
+    },
+    {
       "id": "mapNumRange",
       "type": "snippetListing",
       "title": "mapNumRange",
