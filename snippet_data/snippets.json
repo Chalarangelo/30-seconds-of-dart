@@ -790,16 +790,16 @@
           "example": "initial([1, 2, 3]); // [1, 2]\ninitial([1]); // [1]\ninitial([]); // []"
         },
         "tags": [
-          "utility",
+          "list",
           "intermediate"
         ]
       },
       "meta": {
         "hash": "bcfee93b01b5071c0384abdd23752417c0d7bea5914b53e66d24a97ca3616523",
         "firstSeen": "1582051248",
-        "lastUpdated": "1582051248",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1584432225",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -1704,16 +1704,16 @@
           "example": "tail([1, 2, 3]); // [2, 3]\ntail([1]); // [1]\ntail([]); // []"
         },
         "tags": [
-          "utility",
+          "list",
           "intermediate"
         ]
       },
       "meta": {
         "hash": "269a6b68ea441460ecb72d551b0e6c53bf0346c63d1b6be73fa7747c6badc9bf",
         "firstSeen": "1582051248",
-        "lastUpdated": "1582051248",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1584432244",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {

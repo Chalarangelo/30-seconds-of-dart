@@ -497,7 +497,7 @@
       "attributes": {
         "text": "Returns all the elements of a list except the last one.\n\nCheck if `lst` has the appropriate length, use `List.sublist(0, lst.length - 1)` if possible to return the result, otherwise return `lst`.\n\n",
         "tags": [
-          "utility",
+          "list",
           "intermediate"
         ]
       },
@@ -1078,7 +1078,7 @@
       "attributes": {
         "text": "Returns all the elements of a list except the first one.\n\nCheck if `lst` has the appropriate length, use `List.sublist(1, lst.length)` if possible to return the result, otherwise return `lst`.\n\n",
         "tags": [
-          "utility",
+          "list",
           "intermediate"
         ]
       },
