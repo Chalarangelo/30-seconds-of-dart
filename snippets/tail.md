@@ -1,6 +1,6 @@
 ---
 title: tail
-tags: utility,intermediate
+tags: list,intermediate
 ---
 
 Returns all the elements of a list except the first one.
