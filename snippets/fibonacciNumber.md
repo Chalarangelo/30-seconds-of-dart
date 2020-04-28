@@ -1,6 +1,6 @@
 ---
 title: fibonacciNumber
-tags: math,beginner
+tags: math,recursion,beginner
 ---
 
 Returns the nth Fibonacci number.
