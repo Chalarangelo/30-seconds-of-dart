@@ -1,5 +1,5 @@
 ---
-title: fibonacci-value
+title: fibonacciNumber
 tags: math,beginner
 ---
 
