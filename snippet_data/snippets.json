@@ -562,6 +562,31 @@
       }
     },
     {
+      "id": "fibonacciNumber",
+      "title": "fibonacciNumber",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "fibonacciNumber.md",
+        "text": "Returns the nth term of the Fibonacci sequence.\n\nUse recursion to calculate the `n`th term in the Fibonacci sequence.\n\n",
+        "codeBlocks": {
+          "code": "int fibonacci(int n) {\n  if (n <= 0) return 0;\n  return n < 2 ? n : (fibonacci(n - 1) + fibonacci(n - 2));\n}",
+          "example": "fibonacci(6); // 8"
+        },
+        "tags": [
+          "math",
+          "recursion",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "db58d0e473255dec7abdae831584773c9b629be8d4a8df32412a7073964f95aa",
+        "firstSeen": "1588034834",
+        "lastUpdated": "1588053412",
+        "updateCount": 5,
+        "authorCount": 3
+      }
+    },
+    {
       "id": "filterNonUnique",
       "title": "filterNonUnique",
       "type": "snippet",

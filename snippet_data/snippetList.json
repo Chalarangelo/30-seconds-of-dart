@@ -355,6 +355,22 @@
       }
     },
     {
+      "id": "fibonacciNumber",
+      "type": "snippetListing",
+      "title": "fibonacciNumber",
+      "attributes": {
+        "text": "Returns the nth term of the Fibonacci sequence.\n\nUse recursion to calculate the `n`th term in the Fibonacci sequence.\n\n",
+        "tags": [
+          "math",
+          "recursion",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "db58d0e473255dec7abdae831584773c9b629be8d4a8df32412a7073964f95aa"
+      }
+    },
+    {
       "id": "filterNonUnique",
       "type": "snippetListing",
       "title": "filterNonUnique",
