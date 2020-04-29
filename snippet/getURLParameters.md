@@ -1,6 +1,6 @@
 ---
 title: getURLParameters
-tags: Dart,String,Uri,intermediate
+tags: Dart,string,uri,intermediate
 ---
 Returns an String containing the parameters of the current URL or an empty String in case tehe parameter doesn´t contain parameters or is not a proper URI.
 
