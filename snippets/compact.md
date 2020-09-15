@@ -5,7 +5,7 @@ tags: list,beginner
 
 Removes falsy values from a list.
 
-Use `Iterable.removeWhere()` in combination with the cascade operator (`..`) to filter out falsy values (`false`, `null`).
+- Use `Iterable.removeWhere()` in combination with the cascade operator (`..`) to filter out falsy values (`false`, `null`).
 
 ```dart
 List<T> compact<T>(List<T> lst) {

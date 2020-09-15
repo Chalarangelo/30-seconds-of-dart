@@ -5,7 +5,7 @@ tags: math,list,function,intermediate
 
 Returns the sum of a list, after mapping each element to a number using the provided function.
 
-Use `Iterable.map()` to map each element to the numeric value returned by `fn`, `Iterable.reduce()` to sum the values.
+- Use `Iterable.map()` to map each element to the numeric value returned by `fn`, `Iterable.reduce()` to sum the values.
 
 ```dart
 num sumBy<T>(List<T> lst, num Function(T) fn) {

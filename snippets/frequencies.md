@@ -5,8 +5,8 @@ tags: list,intermediate
 
 Returns a map with the unique values of a list as keys and their frequencies as the values.
 
-Use `Iterable.toSet()` to get the unique values of the list.
-Use `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.
+- Use `Iterable.toSet()` to get the unique values of the list.
+- Use `Map.fromIterable()`, `Iterable.where()` and `Iterable.length` to generate a map with the unique values as keys and their frequencies as values.
 
 ```dart
 Map<T, int> frequencies<T>(Iterable<T> itr) {

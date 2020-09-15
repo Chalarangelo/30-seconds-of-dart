@@ -5,7 +5,7 @@ tags: math,list,beginner
 
 Returns the sum value of a list of numbers.
 
-Use `Iterable.reduce()` to sum all the numbers in a list.
+- Use `Iterable.reduce()` to sum all the numbers in a list.
 
 ```dart
 num sum(List<num> nums){

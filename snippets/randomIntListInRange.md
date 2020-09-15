@@ -5,9 +5,9 @@ tags: math,utility,random,intermediate
 
 Returns a a list of `n` random integers in the specified range.
 
-Use `List.generate()` to generate a list with `n` terms, using a function that returns a random integer between `min` and `max`.
-Omit the optional parameter, `min`, to use a default minimu value of `0`.
-Omit the optional parameter, `max`, to use a default maximum value of `100`.
+- Use `List.generate()` to generate a list with `n` terms, using a function that returns a random integer between `min` and `max`.
+- Omit the optional parameter, `min`, to use a default minimu value of `0`.
+- Omit the optional parameter, `max`, to use a default maximum value of `100`.
 
 ```dart
 import 'dart:math';

@@ -5,7 +5,7 @@ tags: math,beginner
 
 Converts an angle from radians to degrees.
 
-Use `pi` and the radian to degree formula to convert the angle from radians to degrees.
+- Use `pi` and the radian to degree formula to convert the angle from radians to degrees.
 
 ```dart
 import 'dart:math';

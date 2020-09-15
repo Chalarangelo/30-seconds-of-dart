@@ -5,7 +5,7 @@ tags: list,intermediate
 
 Returns all the elements of a list except the last one.
 
-Check if `lst` has the appropriate length, use `List.sublist(0, lst.length - 1)` if possible to return the result, otherwise return `lst`.
+- Check if `lst` has the appropriate length, use `List.sublist(0, lst.length - 1)` if possible to return the result, otherwise return `lst`.
 
 ```dart
 List<T> initial<T>(List<T> lst) {

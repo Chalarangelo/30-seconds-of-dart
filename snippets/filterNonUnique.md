@@ -5,7 +5,7 @@ tags: list,intermediate
 
 Filters out the non-unique values in a list.
 
-Use `Iterable.where()` in combination with `List.indexOf()` and `List.lastIndexOf()` to filter out the non-unique values.
+- Use `Iterable.where()` in combination with `List.indexOf()` and `List.lastIndexOf()` to filter out the non-unique values.
 
 ```dart
 List<T> filterNonUnique<T>(List<T> lst) {

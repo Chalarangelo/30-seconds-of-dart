@@ -5,7 +5,7 @@ tags: list,random,beginner
 
 Returns a random element from a list.
 
-Use `Random.nextInt()` to generate a random integer between `0` and `lst.length` and return the list element at that index.
+- Use `Random.nextInt()` to generate a random integer between `0` and `lst.length` and return the list element at that index.
 
 ```dart
 import 'dart:math';

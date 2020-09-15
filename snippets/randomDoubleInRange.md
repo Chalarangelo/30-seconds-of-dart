@@ -5,9 +5,9 @@ tags: math,utility,random,beginner
 
 Returns a random double in the specified range.
 
-Use `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range.
-Omit the optional parameter, `min`, to use a default minimu value of `0.0`.
-Omit the optional parameter, `max`, to use a default maximum value of `1.0`.
+- Use `Random.nextDouble()` to generate a random number between `0.0` and `1.0` and map it to the desired range.
+- Omit the optional parameter, `min`, to use a default minimu value of `0.0`.
+- Omit the optional parameter, `max`, to use a default maximum value of `1.0`.
 
 ```dart
 import 'dart:math';

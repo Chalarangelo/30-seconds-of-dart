@@ -5,7 +5,7 @@ tags: string,regexp,intermediate
 
 Removes non-printable ASCII characters.
 
-Use `String.replaceAll()` with a regular expression to remove non-printable ASCII characters.
+- Use `String.replaceAll()` with a regular expression to remove non-printable ASCII characters.
 
 ```dart
 String removeNonASCII(String str) {

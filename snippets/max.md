@@ -5,7 +5,7 @@ tags: math,list,beginner
 
 Returns the maximum value in a list of numbers.
 
-Use `Iterable.reduce()` in combination with `max()` to find the maximum value.
+- Use `Iterable.reduce()` in combination with `max()` to find the maximum value.
 
 ```dart
 import 'dart:math';

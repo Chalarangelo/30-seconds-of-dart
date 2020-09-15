@@ -5,8 +5,8 @@ tags: list,recursion,intermediate
 
 Flattens a list.
 
-Use recursion.
-Use `Iterable.expand()` to combine elements into a single list, calling `flatten` recursively for any elements that are `List`s.
+- Use recursion.
+- Use `Iterable.expand()` to combine elements into a single list, calling `flatten` recursively for any elements that are `List`s.
 
 ```dart
 List<T> flatten<T>(List<T> lst) {

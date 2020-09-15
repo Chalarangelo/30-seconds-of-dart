@@ -5,8 +5,8 @@ tags: string,regexp,intermediate
 
 Converts a string to kebab case.
 
-Use `String.replaceAllMapped()` to break the string into words and `String.toLowerCase()` to convert each one to lowercase, using a `RegExp`.
-Use `String.replaceAll()` to replace invalid separator characters (`_` and spaces). with hyphens
+- Use `String.replaceAllMapped()` to break the string into words and `String.toLowerCase()` to convert each one to lowercase, using a `RegExp`.
+- Use `String.replaceAll()` to replace invalid separator characters (`_` and spaces). with hyphens
 
 ```dart
 String toKebabCase(String str) {

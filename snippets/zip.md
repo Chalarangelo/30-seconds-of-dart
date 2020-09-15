@@ -5,8 +5,8 @@ tags: list,intermediate
 
 Creates a list of elements, grouped based on the position in the original lists.
 
-Use `List.generate()` to generate a list, using `Iterable.map()`, `Iterable.reduce()` and `max()` to get the longest sublist.
-Use `List.generate()` inside the iterator to generate the sublists, using the appropriate indexes to get their values from the original list.
+- Use `List.generate()` to generate a list, using `Iterable.map()`, `Iterable.reduce()` and `max()` to get the longest sublist.
+- Use `List.generate()` inside the iterator to generate the sublists, using the appropriate indexes to get their values from the original list.
 
 ```dart
 import 'dart:math';

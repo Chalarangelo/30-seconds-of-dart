@@ -5,7 +5,7 @@ tags: list,intermediate
 
 Returns every nth element in a list.
 
-Use `List.generate()` to generate a list that fits the number of elements that will be returned, then add every `nth` element to it.
+- Use `List.generate()` to generate a list that fits the number of elements that will be returned, then add every `nth` element to it.
 
 ```dart
 import 'dart:math';

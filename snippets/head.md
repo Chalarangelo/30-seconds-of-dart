@@ -5,7 +5,7 @@ tags: list,beginner
 
 Returns the head of a list.
 
-Check if `lst` has a non-zero length, use `lst[0]` if possible to return the first element, otherwise return `null`.
+- Check if `lst` has a non-zero length, use `lst[0]` if possible to return the first element, otherwise return `null`.
 
 ```dart
 T head<T>(List<T> lst) {
