@@ -6,9 +6,9 @@ tags: list,intermediate
 Returns a new list containing the elements between `start` and `end`.
 Negative values can be used, indicating an offset from the end of the list.
 
-Use `num.isNegative` to check if either `start` or `end` are negative and normalize their values.
-Use `List.sublist()` with the normalized values to return the desired list.
-Omit the optional parameter, `end`, to use the length of the list as the default.
+- Use `num.isNegative` to check if either `start` or `end` are negative and normalize their values.
+- Use `List.sublist()` with the normalized values to return the desired list.
+- Omit the optional parameter, `end`, to use the length of the list as the default.
 
 ```dart
 List<T> slice<T>(List<T> lst, int start, [int end]) {

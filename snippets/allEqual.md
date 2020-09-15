@@ -5,7 +5,7 @@ tags: list,beginner
 
 Check if all elements in a list are equal.
 
-Use `Iterable.every()` to check if all the elements of the list are the same as the first one.
+- Use `Iterable.every()` to check if all the elements of the list are the same as the first one.
 
 ```dart
 bool allEqual<T>(List<T> itr) {

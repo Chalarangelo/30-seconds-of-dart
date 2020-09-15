@@ -5,7 +5,7 @@ tags: math,beginner
 
 Maps a number from one range to another range.
 
-Returns `n` mapped between `outMin`-`outMax` from `inMin`-`inMax`.
+- Returns `n` mapped between `outMin`-`outMax` from `inMin`-`inMax`.
 
 ```dart
 num mapNumRange(num n, num inMin, num inMax, num outMin, num outMax) {

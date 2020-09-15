@@ -5,9 +5,9 @@ tags: list,intermediate
 
 Chunks a list into smaller lists of the specified size.
 
-Use `List.generate()` to generate a list that fits the number of chunks that will be produced.
-Use `List.sublist()` to map each element of the new list to a chunk the length of `size`. 
-If the original `list` can't be split evenly, the final chunk will contain the remaining elements.
+- Use `List.generate()` to generate a list that fits the number of chunks that will be produced.
+- Use `List.sublist()` to map each element of the new list to a chunk the length of `size`.
+- If the original `list` can't be split evenly, the final chunk will contain the remaining elements.
 
 ```dart
 import 'dart:math';

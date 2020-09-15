@@ -5,7 +5,7 @@ tags: list,beginner
 
 Returns `true` if the provided predicate function returns `false` for all elements in a collection, `false` otherwise.
 
-Use `Iterable.some()` to test if any elements in the collection return `true` based on `fn`. 
+- Use `Iterable.some()` to test if any elements in the collection return `true` based on `fn`.
 
 ```dart
 bool none<T>(Iterable<T> itr, bool Function(T) fn) {

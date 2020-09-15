@@ -5,7 +5,7 @@ tags: list,beginner
 
 Returns the last element in a list.
 
-Check if `lst` has a non-zero length, use `lst[lst.length - 1]` if possible to return the last element, otherwise return `null`.
+- Check if `lst` has a non-zero length, use `lst[lst.length - 1]` if possible to return the last element, otherwise return `null`.
 
 ```dart
 T head<T>(List<T> lst) {

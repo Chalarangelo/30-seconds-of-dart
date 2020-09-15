@@ -5,7 +5,7 @@ tags: list,intermediate
 
 Creates a list of lists, ungrouping the elements in a list produced by [zip](/dart/s/zip).
 
-Use `List.generate()` twice to generate a list of lists, using the appropriate indexes to get their values from the original list.
+- Use `List.generate()` twice to generate a list of lists, using the appropriate indexes to get their values from the original list.
 
 ```dart
 List<List<T>> unzip<T>(List<List<T>> itr) {

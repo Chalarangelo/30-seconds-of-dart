@@ -5,9 +5,9 @@ tags: string,regexp,intermediate
 
 Converts a string to camelcase.
 
-Use `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.
-Use `String.replaceAll()` to remove invalid separator characters (`_`, `-` and spaces).
-Finally, use `String.toLowerCase()` and to convert the first letter to lowercase.
+- Use `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.
+- Use `String.replaceAll()` to remove invalid separator characters (`_`, `-` and spaces).
+- Finally, use `String.toLowerCase()` and to convert the first letter to lowercase.
 
 ```dart
 String toCamelCase(String str) {

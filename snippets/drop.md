@@ -5,7 +5,7 @@ tags: list,beginner
 
 Returns a new list with `n` elements removed from the left.
 
-Use `List.sublist()` to remove the specified number of elements from the left.
+- Use `List.sublist()` to remove the specified number of elements from the left.
 
 ```dart
 List<T> drop<T>(List<T> lst, [int n = 1]) {

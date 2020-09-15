@@ -5,7 +5,7 @@ tags: math,recursion,beginner
 
 Returns the nth term of the Fibonacci sequence.
 
-Use recursion to calculate the `n`th term in the Fibonacci sequence.
+- Use recursion to calculate the `n`th term in the Fibonacci sequence.
 
 ```dart
 int fibonacci(int n) {

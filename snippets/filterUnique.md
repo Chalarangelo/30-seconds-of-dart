@@ -5,7 +5,7 @@ tags: list,intermediate
 
 Filters out the unique values in a list.
 
-Use `Iterable.where()` in combination with `List.indexOf()` and `List.lastIndexOf()` to filter out the unique values.
+- Use `Iterable.where()` in combination with `List.indexOf()` and `List.lastIndexOf()` to filter out the unique values.
 
 ```dart
 List<T> filterUnique<T>(List<T> lst) {

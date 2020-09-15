@@ -5,7 +5,7 @@ tags: math,list,beginner
 
 Generates a list, containing the Fibonacci sequence, up until the nth term.
 
-Use `List.generate()` to generate a list with `n` terms, using a function that returns the sum of the last two values, except for the first two.
+- Use `List.generate()` to generate a list with `n` terms, using a function that returns the sum of the last two values, except for the first two.
 
 ```dart
 List<int> fibonacci(int n) {

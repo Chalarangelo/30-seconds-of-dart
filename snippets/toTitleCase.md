@@ -5,8 +5,8 @@ tags: string,regexp,intermediate
 
 Converts a string to title case.
 
-Use `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.
-Use `String.replaceAll()` to replace invalid separator characters (`-` and `_`) with spaces.
+- Use `String.replaceAllMapped()` to break the string into words and capitalize the first letter of each word, using a `RegExp`.
+- Use `String.replaceAll()` to replace invalid separator characters (`-` and `_`) with spaces.
 
 ```dart
 String toTitleCase(String str) {
