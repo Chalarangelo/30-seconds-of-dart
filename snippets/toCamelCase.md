@@ -11,6 +11,7 @@ Converts a string to camelcase.
 
 ```dart
 String toCamelCase(String str) {
+  if(str?.isEmpty ?? true) return '';
   String s = str
       .replaceAllMapped(
           RegExp(
